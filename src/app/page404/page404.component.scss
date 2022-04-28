@@ -1,0 +1,229 @@
+//colors
+$yellow: #ffd42d;
+$blue: #1544c0;
+$orange: #f86449;
+$perpel: #5210ac;
+$white: #fff;
+$black: #282936;
+$darkgray: #333;
+
+.container {
+  display: flex;
+  position: fixed;
+  background: rgb(159, 7, 7);
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  z-index: 0;
+}
+
+#particles-js, .particles-js-canvas-el {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  z-index: 1;
+}
+
+h1, h3 {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  filter: drop-shadow(0 0 5px rgba(black, .5));
+  z-index: 2;
+  margin: 0;
+}
+
+h1 {
+    font-size: clamp(4rem, 8vw, 8rem);
+    margin-bottom: 2rem;
+}
+
+.blob {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+    max-width: 80vw;
+    max-height: 80vw;
+    min-width: 300px;
+    min-height: 300px;
+    background-color: #d62607;
+    z-index: 2;
+
+    animation: spin2 6s infinite linear;
+    // mix-blend-mode: overlay;
+}
+
+@keyframes spin2 {
+    from { 
+        opacity: .8;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    to { 
+        opacity: .8;
+        transform: rotate(-360deg); 
+    }
+  }
+  @-webkit-keyframes spin2 {
+    from { 
+        opacity: .8;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    to { 
+        opacity: .8;
+        transform: rotate(-360deg); 
+    }
+  }
+  
+.action-btns-cont{
+  display: flex;
+  width: 60vw;
+  justify-content: space-evenly
+}
+@media screen and (max-width: 700px) {
+  .action-btns-cont {
+    display: flex;
+    width: 90vw;
+    height: 8rem;
+    flex-direction: column;
+    justify-content: space-between
+    // align-items: center;
+  }
+}
+
+.action-btn {
+  position: fixed;
+  top: 58%;
+  white-space: nowrap;
+  
+  margin: 5rem;
+}
+
+.contact-btn {
+  right: calc(33vw - 12rem) !important;
+}
+.goToWlc-btn {
+  left: calc(33vw - 12rem) !important;
+}
+
+@media screen and (max-width: 700px) {
+  .action-btn {
+    left: calc(50vw - 12rem) !important;
+  }
+  .goToWlc-btn {
+    top: 45%;
+  }
+  .contact-btn {
+    top: 55%;
+  }
+}
+
+.goToWlc-btn {
+  width: 17rem;
+  left: 0;
+
+  .icon {
+    background: $white;
+  }
+  &.arrow {
+    &::before {
+      content: '';
+      border-top: 0.125rem solid $white;
+      border-right: 0.125rem solid $white;
+    }
+  }
+  .circle {
+    background: none;
+    border: solid 2px $white;
+    .icon {
+      &.arrow {
+        &::before {
+          border-top: 0.125rem solid $white;
+          border-right: 0.125rem solid $white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  &:hover {
+    .circle {
+      width: 100%;
+      .icon {
+        &.arrow {
+        background: $white;
+        transform: translate(1rem, 0);
+        }
+      }
+    }
+    .button-text {
+      color: $white;
+    }
+  }
+}
+
+
+.mob-profile-social-links {
+  position: fixed;
+  top: 75%;
+  // outline: solid 1px red;
+  white-space: nowrap;
+  list-style: none;
+  padding: 0 !important;
+  //float: left;
+  //width: 25%;
+  text-align: center;
+  z-index: 4;
+  width: 80vw;
+}
+
+.mob-profile-social-links li {
+    display: inline-block;
+}
+
+  .mob-profile-social-links li a {
+    display: inline-block;
+    color: $white;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    margin: 16px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    transform: scale(1.25);
+    transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+  }
+  
+  .mob-profile-social-links li a i {  
+    position: relative;
+
+  }
+  
+  .mob-profile-social-links li a img,
+  .mob-profile-social-links li a svg {
+    width: 24px;
+  }
+
+.mob-profile-social-links li a:hover {
+    //filter: drop-shadow(0 0 2px orangered);
+    //text-shadow: 0 0 5px orangered;
+    cursor: pointer;
+    color: #f86449;
+    transform: scale(1.75);
+}

@@ -1,0 +1,110 @@
+//colors
+$yellow: #ffd42d;
+$blue: #1544c0;
+$orange: #f86449;
+$perpel: #5210ac;
+$white: #fff;
+$black: #282936;
+$darkgray: #333;
+
+* {
+    color: $white;
+}
+
+.container {
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+ul {
+    list-style: none;
+    margin-left: -2.5rem;
+    margin-bottom: 5rem;
+    font-size: clamp(3rem, 10vw, 7rem);
+    & li {
+        // display: flex;
+        padding: 2rem 0;
+        padding-bottom: 1.5rem !important;
+        // cursor: pointer;
+        transition: transform 300ms;
+    }
+}
+
+.project-link {
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 2.5rem;
+    color: rgba($white, 1);
+    // color: rgba(#202020, 1);
+    transition: color 300ms, margin 300ms, transform 300ms, opacity 800ms;
+    white-space: nowrap;
+}
+.project-img {
+    // display: none;
+    display: inline-flex;
+    position: absolute;
+    height: 18vw;
+    width: auto;
+    margin-top: -4vw !important;
+    margin-left: 2vw;
+    opacity: 0;
+    transition: opacity 400ms, transform 400ms;
+    pointer-events: none;
+}
+
+ul:hover > li > .project-link {
+    opacity: 0.25;
+    // outline: solid 1px red;
+}
+
+ul:hover > li:hover > .project-link {
+    color: rgba($white, 1);
+    margin-left: 2vw;
+    transform: skewX(-20deg);
+    opacity: 1;
+    // outline: solid 1px blue;
+}
+
+li:hover .project-img {
+    display: inline-flex;
+    // top: auto;
+    opacity: 1;
+    transform: skew(-5deg);
+    filter: drop-shadow(2px 2px 15px rgba($black, 0.3));
+    pointer-events: all;
+}
+
+li:hover {
+    background-color: rgba($white, 0.1);
+    background: linear-gradient(
+        90deg,
+        rgba($black, 0) 15%,
+        rgba($white, 0.1) 50%,
+        rgba($white, 0.1) 70%,
+        rgba($black, 0) 100%
+    );
+
+    // margin: -2rem;
+}
+
+li:hover::after {
+    content: "This Page Is Under Construction";
+    position: absolute;
+    display: flex;
+    left: 30%;
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: $orange;
+    filter: drop-shadow(2px 2px 15px rgba($black, 0.3));
+}
+
+@media screen and (max-width: 700px) {
+    .project-link {
+        padding-left: 1rem;
+    }
+    .project-img {
+        right: 2rem;
+    }
+    li:hover .project-img {
+        pointer-events: none;
+    }
+}

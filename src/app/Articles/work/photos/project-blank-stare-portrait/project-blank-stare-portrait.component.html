@@ -1,0 +1,236 @@
+<div class="header-pic-top">
+    <div class="arrow-down">
+        <a href="/project-blank-stare-portrait#container" class="scroll-down-arrow-wrap">
+            <div class="scroll-arrow">
+                <span></span><span></span>
+            </div>
+        </a>
+    </div>
+    <span class="header-pic-text">Blank stare</span>
+</div>
+<div class="shadow-box-separator"></div>
+
+<div id="container" class="container">
+
+    <div class="top-control-container">
+        <a [routerLink]="['/photos']" fragment="project-blank-stare-portrait"
+            class="project-back corner-project-back lone-arrow">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to Projects</span>
+        </a>
+    </div>
+
+    <div class="zoom-btn">
+        <div id="zoomBtn" (click)="zoomOnClick($event)">
+            <fa-icon *ngIf="!isZoom" [icon]="fa_searchPlus"></fa-icon>
+            <fa-icon *ngIf="isZoom" [icon]="fa_searchMinus"></fa-icon>
+            <span>{{ isZoom? 'Zoom out':'Zoom in'}}</span>
+        </div>
+    </div>
+
+    <div id="section1" class="section1">
+        <img-comparison-slider [value]="50" class="slider-with-animated-handle slider-focus slider-with-shadows"
+            [ngClass]="{zoom: isZoom}">
+            <figure slot="first" class="before">
+                <img height="100%" src="/assets/images/work/photos/_MG_9955.webp">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img height="100%" src="/assets/images/work/photos/_MG_9955f.webp">
+                <figcaption>After</figcaption>
+            </figure>
+
+            <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                    vector-effect="non-scaling-stroke"></path>
+            </svg>
+        </img-comparison-slider>
+
+        <div class="zone1">
+            <h1>The blank stare</h1>
+
+            <p>
+                <span class="second-title">Back story:</span> <br>
+                This was shot during the preparation to film some interviews for a mini documentary. <br>
+                We were setting up the lights for the scene, and I was the test subject to test the lighting.
+                <br>
+                Below are some of the settings for Geeks:
+            </p>
+
+            <div class="specs-table">
+                <span>ISO:</span> <span>800</span>
+                <span>Focal ratio:</span> <span>F/2.2</span>
+                <span>Shutter speed:</span> <span>1/50</span>
+                <span>Focal length:</span> <span>50mm</span>
+            </div>
+        </div>
+        <div class="arrow-down">
+            <a href="/project-blank-stare-portrait#section2" class="scroll-down-arrow-wrap">
+                <div class="scroll-arrow">
+                    <span></span><span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="shadow-box-separator"></div>
+
+    <div class="header-pic"></div>
+
+    <div id="section2" class="section2">
+        <p>This picture needed some work, I had a bad hair day, I needed some skin care, and there were some issues with
+            shadow cast.</p>
+        <h3>Work done</h3>
+        <div class="grid-2">
+            <img-comparison-slider [value]="50"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-1.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-1f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+            <p>
+                <span class="title3">Skin retouching:</span>
+                I removed the dark spots without losing the shine and skin details.
+            </p>
+        </div>
+        <div class="grid-2-i">
+            <p>
+                <span class="title3">Eliminate hair frizz:</span>
+                Not everyday is a good hair day, especially the morning after a night shower. I had a bad frizzy hair,
+                so I had to clean things up.
+                Beside that, I gave my beard some love.
+            </p>
+            <img-comparison-slider [value]="75"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-2.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-2f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+        </div>
+        <div class="grid-2">
+            <img loading="lazy" class="img" height="auto" width="300" src="/assets/images/work/photos/details/color wheel OR&TL.png"
+                alt="orange and teal color wheel">
+            <p>
+                <span class="title3">Color grading:</span>
+                Orange and teal are the opposite colors on the color wheel (complementary colors), thus it creates more
+                contrast between the subject and the background.
+                <br>Orange is more like the color of the skin, so I made the background more blueish to add depth to the
+                picture.
+            </p>
+        </div>
+        <div class="grid-2-i">
+            <p>
+                <span class="title3">Fixing shadow cast:</span>
+                This picture was taken during the setup of the lights, there was a pretty bad shadow cast from the nose,
+                on the cheek and eye.
+                <br>So I had to fix it in post, using cloning, dodging and burning techniques.
+            </p>
+            <img-comparison-slider [value]="70"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-3.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-3f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+        </div>
+        <h3>Details you might have missed</h3>
+        <div></div>
+        <div class="grid-2">
+            <img-comparison-slider [value]="40"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-4.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-4f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+            <p>
+                <span class="title3">Cloning and repainting:</span>
+                Trimming the beard on top of the shirt required repainting lost details of the shirt.
+            </p>
+        </div>
+        <div class="grid-2-i">
+            <p>
+                <span class="title3">Eyes brightening:</span>
+                Often we lose the shine of the eyes in pictures, so it's nice to add back some life to eyes and draw
+                more attention to them.
+            </p>
+            <img-comparison-slider [value]="80"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-5.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-5f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+        </div>
+        <div class="grid-2">
+            <img-comparison-slider [value]="50"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-6.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/_MG_9955-6f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+            <p>
+                <span class="title3">Cleaning the background :</span>
+                Removing the writing in the background to eliminate distraction.
+            </p>
+        </div>
+        <div class="grid-2-i">
+            <p>
+                <span class="title3">Déjà-vu:</span>
+                You already seen this picture in the welcome page.
+                <br>Why? Because I wanted to showcase one of the hardest
+                things to do when photo editing: Removing background behind hair (or beard for that matter).
+            </p>
+            <img loading="lazy" class="img" height="auto" width="400" src="/assets/images/work/photos/details/introPic.webp"
+                alt="introPic">
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,35 @@
+//colors
+$yellow: #ffd42d;
+$blue: #1544c0;
+$orange: #f86449;
+$perpel: #5210ac;
+$white: #fff;
+$black: #282936;
+$darkgray: #333;
+
+* {
+    color: white;
+}
+
+.blob {
+    background-color: $orange;
+}
+
+.bg-title-tr {
+    color: $orange;
+    opacity: 1;
+    font-size: clamp(6.5rem,12vw,15rem);
+    text-shadow: -5px -5px 15px rgba($color: $black, $alpha: .12), //.08
+                  5px 5px 15px rgba($color: $white, $alpha: .12); //.08
+}
+
+.wrapper {
+    background-color: $orange;
+    position: relative;
+    margin-top: -60px;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    height: 100vh;
+}

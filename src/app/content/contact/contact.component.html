@@ -1,0 +1,45 @@
+<div class="modal contact-modal" data-active="on" style="display: block;">
+
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+  <div class="blob"></div>
+
+  <div class="full-size pos-a-t-l">
+    <div class="ledge ledge-minus-16-deg"></div>
+  </div>
+
+  <div class="contact-modal-content">
+    <h4 class="no-line">Contact me</h4>
+    <a href="mailto:{{email}}" class="email"><span>{{email}}</span></a>
+    <span class="email-indicator">*Click on the address to send me an Email*</span>
+    
+  </div>
+
+  <div class="contact-social">
+    <h3>Social</h3>
+    <ul class="profile-social-links">
+      <li>
+        <a target="_blank" href="{{facebook}}">
+          <fa-icon [icon]="fa_facebook" aria-hidden="true"></fa-icon>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="{{instagram}}">
+          <fa-icon [icon]="fa_instagram"></fa-icon>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="{{linkedIn}}">
+          <fa-icon [icon]="fa_linkedIn"></fa-icon>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <a (click)="back()" routerLinkActive="router-link-active" class="close">
+    <span></span><span></span>
+  </a>
+
+</div>

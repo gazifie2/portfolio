@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  YTembed:"https://www.youtube.com/embed/",
+  GDembed:"https://drive.google.com/file/d/",
+  // email:"gazifie@yahoo.fr",
+  email:"gaz.boubaker@gmail.com",
+  linkedIn:"https://www.linkedin.com/in/ghazi-boubaker/",
+  instagram:"https://www.instagram.com/ghazi.lens/",
+  facebook:"https://www.facebook.com/ghazi.boubaker.20/",
 };
 
 /*

@@ -1,0 +1,162 @@
+<div class="container">
+
+    <div class="bg">
+        <div class="bg-title-tr">About</div>
+    </div>
+
+    <div class="contact">
+        <!-- some social links to show off -->
+        <ul class="profile-social-links">
+            <li>
+                <a href="mailto:{{email}}">
+                  <fa-icon [icon]="fa_envelope"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="{{facebook}}">
+                    <fa-icon [icon]="fa_facebook" aria-hidden="true"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="{{instagram}}">
+                    <fa-icon [icon]="fa_instagram"></fa-icon>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="{{linkedIn}}">
+                    <fa-icon [icon]="fa_linkedIn"></fa-icon>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="content">
+
+        <ul class="indexer">
+            <a class="index" id="index1" (click)="showInScreen('section1')"></a>
+            <a class="index" id="index2" (click)="showInScreen('section2')"></a>
+            <a class="index" id="index3" (click)="showInScreen('section3')"></a>
+        </ul>
+
+        <!-- <div class="noise"></div> -->
+
+        <div class="text">
+            <div id="section1" class="section" value="index1">
+                <p class="title1" id="chap1">Chapter One</p>
+                <p class="title2">Who?</p>
+
+                <p class="paragraphe">
+                    I’m Ghazi, a Freelance Video Producer, Photographer, Designer and a Full Stack Web Developer, based
+                    in <a class="link-tunisia" href={{googleEarthUrl}} target="_blank">Tunis, Tunisia <img class="pin" src="assets/images/map-pin-drop.webp"> </a>. <br><br>
+                </p>
+                <div class="spacing"></div>
+
+            </div>
+
+            <div id="section2" class="section" value="index2">
+                <p class="title1" id="chap2">Chapter Two</p>
+                <p class="title2">Why?</p>
+
+                <p class="paragraphe">
+                    I grew up between electronics, computers and audio equipment.
+                    This is my passion, what I love to do and what I enjoy the most.
+
+                </p>
+
+                <p class="title2">
+                    My mission
+                </p>
+                <p class="paragraphe">
+                    Is to add value to what I touch, and make growth to your business.
+                </p>
+                <p class="title2">
+                    My philosophy:
+                </p>
+                <p class="paragraphe">
+                    <span>
+                        <ul>
+                            <li><q>Everything can be improved.</q></li>
+                            <br>
+                            <li><q>You die once you stop learning.</q></li>
+                            <br>
+                            <li><q>Details make perfection, and perfection is not a detail.</q> ― Leonardo Da Vinci</li>
+                            <br>
+                            <li><q>Be a jack of all trades and a master of one.</q></li>
+                        </ul>
+                        <div class="spacing"></div>
+
+                    </span>
+
+                </p>
+
+            </div>
+
+            <div id="section3" class="section" value="index3">
+                <p class="title1" id="chap3">Chapter Three</p>
+                <p class="title2">Experience</p>
+
+                <p class="paragraphe">
+                    I have over {{age}} years of hands on experience, {{age - 7}} of which are full time work.
+                    <span>
+                        <ul>
+                            <li>Photo retouching and editing since 2008.</li>
+                            <li>Fixing and building custom computers since 2009.</li>
+                            <li>I have been working in a communication team as a photo|videographer since 2016 at
+                                <a href="https://www.jasminefoundation.org/ar/" target="_blank">Jasmine Foundation</a> <small>(NGO)</small> <br>
+                                During this period, I also worked with <a href="https://www.britishcouncil.org/" target="_blank">British Council</a> <small>(NGO)</small>
+                                (<a href="https://active-citizens.britishcouncil.org/" target="_blank">Active Citizens project</a>)
+                            </li>
+                            <p> <span class="JobDesc">Job description:</span>
+                                <span>
+                                    <ul class="JobDesc">
+                                        <li class="">Filming documentaries</li>
+                                        <li class="">Covering events (photos and videos)</li>
+                                        <li class="">Shooting and editing interviews</li>
+                                    </ul>
+                                </span>
+                            </p>
+                            <li>I took the responsibility of IT manager in 2018 at
+                                <a href="https://www.jasminefoundation.org/ar/" target="_blank">Jasmine Foundation</a> <small>(NGO)</small>
+                            </li>
+                            <p> <span class="JobDesc">Job description:</span>
+                                <span>
+                                    <ul class="JobDesc">
+                                        <li class="">It consultant</li>
+                                        <li class="">Network administration</li>
+                                        <li class="">Maintenance and repair</li>
+                                    </ul>
+                                </span>
+                            </p>
+                            <li>I'm a full stack developer since 2018 at <a href="http://bilog.fr/"
+                                target="_blank">Bilog</a> </li>
+                            <p> <span class="JobDesc">Job description:</span>
+                                <span>
+                                    <ul class="JobDesc">
+                                        <li class="">Backend development: Php | CMS | Symfony</li>
+                                        <li class="">Frontend development : HTML5,CSS3, javascript,TS | Angular</li>
+                                        <li class="">Conception</li>
+                                    </ul>
+                                </span>
+                            </p>
+                            <li>Freelancing </li>
+                            <p> <span class="JobDesc">Job description:</span>
+                                <span>
+                                    <ul class="JobDesc">
+                                        <li class="">Design : AI, Adobe XD</li>
+                                        <li class="">Web development : Symfony & Angular | Php, HTML, CSS, JS, TS</li>
+                                        <li class="">Photography : Shooting and editing (Photoshop & Lightroom)</li>
+                                        <li class="">Videography : Video editing (Adobe premiere & after effects)</li>
+                                    </ul>
+                                </span>
+                            </p>
+                        </ul>
+
+                    </span>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

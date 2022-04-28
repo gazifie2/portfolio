@@ -1,0 +1,101 @@
+
+<!-- / Intro -->
+<div id="intro">
+  <div class="blob blob-liquide"></div>
+  <div class="blob blob-liquide blob-little"></div>
+  <div class="blob blob-liquide"></div>
+  <div class="blob blob-liquide "></div>
+
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+  <div class="blob blob-liquide "></div>
+
+  <div class="text"></div>
+<!-- SVG GOOEY FILTER-->
+  <svg>
+    <filter id="gooey">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -8" result="gooey"></feColorMatrix>
+      <feComposite in="SourceGraphic" in2="gooey" operator="atop"></feComposite>
+    </filter>
+  </svg>
+</div>
+
+<!-- / Intro -->
+
+<div class="patch-spot"></div>
+
+<div class="container">
+  <div id="particles-js">
+    <canvas class="particles-js-canvas-el"></canvas>
+  </div>
+
+  <span class="titleBlock">
+    <p class="titleSurrounds-up">Hi, <span style="white-space: nowrap;">I am</span></p>
+    <span class="title title-animation">Ghazi Boubaker</span>
+    <p class="titleSurrounds-down second-title">
+      <span>I'm a  </span>
+      <span class="content">
+        <div class="content__container">
+          <ul class="content__container__list">
+            <li class="content__container__list__item">Full stack developer</li>
+            <li class="content__container__list__item">Photographer</li>
+            <li class="content__container__list__item">Videographer</li>
+            <li class="content__container__list__item">IT consultant</li>
+          </ul>
+        </div>
+      </span>
+    </p>
+    <p class="titleSurrounds-down pc-only">
+      My mission is to add value to what I touch, and make growth to your business.
+    </p>
+
+  </span>
+
+  <div class="blured-side-text">Welcome</div>
+
+  <div class="card">
+    <div class="card__content">
+      <div class="card__front">
+        <div class="blob front-blob"></div>
+
+        <!-- <div class="img1-background"></div> -->
+        <span class="title2 front-text">Web <br> developer.</span>
+        <img class="img front-img" src="../assets/images/pic_portfolio-1080.webp" alt="portfolio-1080">
+      </div>
+
+      <div class="card__back">
+        <div class="blob back-blob"></div>
+        <!-- <div class="img2-background"></div> -->
+        <span class="title2 back-text">Artsy.</span>
+        <img class="img back-img" src="../assets/images/bearded-staus3ff.webp" alt="bearded-statue">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <picture>
+    <source media="(min-width: 1500px)" srcset="../assets/images/pic_portfolio-2844.png">
+    <source media="(min-width: 1080px)" srcset="../assets/images/pic_portfolio-1080.png">
+    <source media="(max-width: 720px)" srcset="../assets/images/pic_portfolio-720.png">
+    <source media="(max-width: 1080px)" srcset="../assets/images/pic_portfolio-1080.png">
+    <img src="../assets/images/pic_portfolio-720.png" alt="portfolio-720">
+  </picture> -->
+
+  <div class="action-btn-container">
+    <button class="action-btn contact-btn">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact me</span>
+    </button>
+
+    <a class="learn-more" [routerLink]="['/about']" routerLinkActive="router-link-active">Learn more about me</a>
+  </div>
+
+</div>

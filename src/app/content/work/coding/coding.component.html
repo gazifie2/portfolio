@@ -1,0 +1,18 @@
+<!-- <app-in-progress></app-in-progress> -->
+
+<div class="container">
+    <div class="top-control-container">
+        <a [routerLink]="['/work']" class="project-back corner-project-back lone-arrow">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to work</span>
+        </a>
+    </div>
+    
+    <ul onMouseOver="this.style.opacity='1'">
+        <li><a class="project-link" [routerLink]="['/project-portfolio']" routerLinkActive="router-link-active" >My portfolio <img class="project-img" src="/assets/images/gifs/preview-portfolio-desktop.gif" alt="preview-portfolio-desktop"> </a> </li>
+        <li><a class="project-link" [routerLink]="['/project-maregie']">maRegie <img class="project-img" src="/assets/images/gifs/preview-maRegie-desktop.gif" alt="preview-maRegie-desktop"> </a> </li>
+        <li><a class="project-link" [routerLink]="['/coding']">ACSBN <img class="project-img" src="/assets/images/gifs/preview-acsbn-desktop.gif" alt="preview-acsbn-desktop"> </a> </li>
+        <li><a class="project-link" [routerLink]="['/coding']">ACSF <img class="project-img" src="/assets/images/gifs/preview-acsf-desktop.gif" alt="preview-acsf-desktop"> </a> </li>
+    </ul>
+</div>

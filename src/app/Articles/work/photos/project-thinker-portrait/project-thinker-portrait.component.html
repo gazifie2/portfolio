@@ -1,0 +1,156 @@
+<div class="header-pic-top">
+    <div class="arrow-down">
+        <a href="/project-thinker-portrait#container" class="scroll-down-arrow-wrap">
+            <div class="scroll-arrow">
+                <span></span><span></span>
+            </div>
+        </a>
+    </div>
+    <span class="header-pic-text">The thinker</span>
+</div>
+<div class="shadow-box-separator"></div>
+
+<div id="container" class="container">
+
+    <div class="top-control-container">
+        <a [routerLink]="['/photos']" fragment="project-thinker-portrait"
+            class="project-back corner-project-back lone-arrow">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to Projects</span>
+        </a>
+    </div>
+
+    <div class="zoom-btn">
+        <div id="zoomBtn" (click)="zoomOnClick($event)">
+            <fa-icon *ngIf="!isZoom" [icon]="fa_searchPlus"></fa-icon>
+            <fa-icon *ngIf="isZoom" [icon]="fa_searchMinus"></fa-icon>
+            <span>{{ isZoom? 'Zoom out':'Zoom in'}}</span>
+        </div>
+    </div>
+
+    <div id="section1" class="section1">
+        <img-comparison-slider [value]="50" class="slider-with-animated-handle slider-focus slider-with-shadows"
+            [ngClass]="{zoom: isZoom}">
+            <figure slot="first" class="before">
+                <img height="100%" src="/assets/images/work/photos/IMG_7791.webp">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img height="100%" src="/assets/images/work/photos/IMG_7791f.webp">
+                <figcaption>After</figcaption>
+            </figure>
+
+            <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                    vector-effect="non-scaling-stroke"></path>
+            </svg>
+        </img-comparison-slider>
+
+        <div class="zone1">
+            <h1>The thinker</h1>
+
+            <p>
+                <span class="second-title">Back story:</span> <br>
+                This picture is a simple portrait shot indoor. There’s no interesting back story about it.
+                However, after seeing the picture on screen, I noticed some symmetry problems in it, and this is what I
+                fixed here. <br>
+                Below are some of the settings for Geeks:
+            </p>
+
+            <div class="specs-table">
+                <span>ISO:</span> <span>400</span>
+                <span>Focal ratio:</span> <span>F/1.8</span>
+                <span>Shutter speed:</span> <span>1/60</span>
+                <span>Focal length:</span> <span>50mm</span>
+            </div>
+        </div>
+        <div class="arrow-down">
+            <a href="/project-thinker-portrait#section2" class="scroll-down-arrow-wrap">
+                <div class="scroll-arrow">
+                    <span></span><span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="shadow-box-separator"></div>
+
+    <div class="header-pic"></div>
+
+    <div id="section2" class="section2">
+        <p>
+            This is a top down lighting scene, the symmetry of the face was off, so it needed some face lifting.
+        </p>
+        <!-- <h3>Details you might have missed</h3> -->
+        <h3>Work done</h3>
+        <div class="grid-2">
+            <img-comparison-slider [value]="50"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_7791-s2.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_7791-s2f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+            <p>
+                <span class="title3">Skin retouching:</span>
+                The skin looks rough in this type of lighting, so it required some touch-ups and some "skin care".
+                <br>Remove spots and pimples, without overdoing it. For men's skin retouching, it is usually recommended
+                to retain skin details and some roughness.
+            </p>
+        </div>
+        <div class="grid-2-i">
+            <p>
+                <span class="title3">Dodging and burning:</span>
+                the dodging and burning technique is used to brighten and darken the skin to add depth and dimension.
+                <br>Here it is used to sculpt the nose to make it look thinner and tighter.
+            </p>
+            <img-comparison-slider [value]="50"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="auto" width="230" src="/assets/images/work/photos/details/IMG_7791-2.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="auto" width="230" src="/assets/images/work/photos/details/IMG_7791-2f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+        </div>
+        <div class="grid-2">
+            <img-comparison-slider [value]="80"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_7791-s1.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_7791-s1f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+            <p>
+                <span class="title3">Cloning and editing:</span>
+                The symmetry of my face was off in this portrait, and my left eye was dark, so I had to brighten the
+                sclera (the white of the eye), and I cloned my left eyebrow to give the face a more appealing face
+                expression.
+                <br>Beside that, I eliminated the hair frizz and I gave my beard some love.
+            </p>
+        </div>
+
+    </div>
+
+
+</div>

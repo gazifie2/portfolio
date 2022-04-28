@@ -1,0 +1,63 @@
+<nav id="navBar" [ngClass]="setColor()" #target>
+  <a class="brand" [routerLink]="['/welcome']">GB</a>
+
+  <!--
+<button class="navbar-toggler" type="button" (click)="toggleCollapse()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  -->
+  <ul class="navbar-collapse">
+    <li [routerLink]="['/welcome']" routerLinkActive="router-link-active">Welcome</li>
+    <li [routerLink]="['/about']" routerLinkActive="router-link-active">About</li>
+    <li [routerLink]="['/work']" routerLinkActive="router-link-active">Work</li>
+    <li [routerLink]="['/services']" routerLinkActive="router-link-active">Services</li>
+    <li [routerLink]="['/contact']">Contact</li>
+  </ul>
+
+  <a id="mob-nav-btn" class="mob-nav-btn" (click)="toggleCollapse()" [ngClass]="BtnCollapseCss()"></a>
+
+  <div *ngIf="isCollapsed" class="mob-nav">
+    <ul>
+      <a (click)="toggleCollapse()" [routerLink]="['/welcome']" routerLinkActive="router-link-active">Welcome</a>
+      <a (click)="toggleCollapse()" [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
+      <a (click)="toggleCollapse()" [routerLink]="['/work']" routerLinkActive="router-link-active">Work</a>
+      <a (click)="toggleCollapse()" [routerLink]="['/services']" routerLinkActive="router-link-active">Services</a>
+    </ul>
+    <div>
+      <h3>Get in Touch</h3>
+      <ol class="mob-profile-social-links">
+        <li>
+          <a href="mailto:{{email}}">
+            <fa-icon [icon]="fa_envelope"></fa-icon>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{facebook}}">
+            <fa-icon [icon]="fa_facebook" aria-hidden="true"></fa-icon>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{instagram}}">
+            <fa-icon [icon]="fa_instagram"></fa-icon>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{linkedIn}}">
+            <fa-icon [icon]="fa_linkedIn"></fa-icon>
+          </a>
+        </li>
+      </ol>
+    </div>
+    <div class="ledge-wrap pos-a-t-l full-size">
+      <div class="ledge ledge-minus-16-deg"></div>
+    </div>
+  </div>
+
+
+  <a id="scrollTopBtn" class="back-to-top-arrow-wrap " (click)="scrollTop(target)">
+    <div class="scroll-arrow">
+        <span></span><span></span>
+    </div>
+</a>
+
+</nav>

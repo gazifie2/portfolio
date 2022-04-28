@@ -1,0 +1,63 @@
+<div class="container">
+
+    <div class="top-control-container">
+        <a [routerLink]="['/work']" class="project-back corner-project-back lone-arrow">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to work</span>
+        </a>
+    </div>
+        
+    <div *ngIf="showSpinner === true" id="loading-container" class="loading-container">
+        <div class="blob"></div>
+        <span class="loadingText">Loading...</span>
+    </div>
+
+    <!-- <div *ngIf="showSpinner === true" id="loading-container" class="loading-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div> -->
+
+    <!--
+    <div class="back-btn">
+        <a href="/work" class="project-back corner-project-back lone-arrow" data-new-state="work">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to Projects</span>
+        </a>
+    </div>
+    -->
+
+    <!--
+<video src="https://www.youtube.com/watch?v=PU-ajD5DOS0" controls poster="/assets/images/film.webp" width="1280"
+        height="720">
+        <a href="https://www.youtube.com/watch?v=PU-ajD5DOS0">Download song</a>
+    </video>
+
+    https://drive.google.com/file/d/1X-qfDPCZyG-Amu18K163IWxDjL0qoaA3/view?usp=sharing
+-->
+
+    <!--
+<div *ngIf="GDembedURL_list.length > 0">
+    <iframe *ngFor="let video of GDembedURL_list" class="video-player" type="text/html"
+     width="1280" height="720"
+    [src]="video" frameborder="0">
+    </iframe>
+</div>
+-->
+
+    <div *ngIf="YTembedURL_list.length == this.videoId_list.length">
+        <iframe *ngFor="let video of YTembedURL_list" (load)="myLoadEvent(true)" class="video-player" type="text/html" width="1280" height="720"
+            [src]="video" frameborder="0" sandbox="allow-same-origin allow-scripts allow-presentation" allowfullscreen autoplay>
+        </iframe>
+    </div>
+
+</div>

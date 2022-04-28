@@ -1,0 +1,50 @@
+<div class="container">
+    <div id="particles-js">
+        <canvas class="particles-js-canvas-el"></canvas>
+      </div>
+    <div class="blob"></div>
+    <h1>404</h1>
+    <h3>The page you requested was not found...</h3>
+
+
+    <div class="action-btns-cont">
+        <button class="action-btn goToWlc-btn">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text" [routerLink]="['/welcome']" routerLinkActive="router-link-active">Go to Welcome
+                page</span>
+        </button>
+    
+        <button class="action-btn contact-btn">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact me</span>
+        </button>
+    </div>
+
+    <ol class="mob-profile-social-links">
+        <li>
+          <a href="mailto:{{email}}">
+            <fa-icon [icon]="fa_envelope"></fa-icon>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{facebook}}">
+            <fa-icon [icon]="fa_facebook" aria-hidden="true"></fa-icon>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{instagram}}">
+            <fa-icon [icon]="fa_instagram"></fa-icon>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{linkedIn}}">
+            <fa-icon [icon]="fa_linkedIn"></fa-icon>
+          </a>
+        </li>
+      </ol>
+    
+</div>

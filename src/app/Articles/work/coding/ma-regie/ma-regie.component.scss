@@ -1,0 +1,11 @@
+.header-pic-top{
+    background-image: url('/assets/images/gifs/preview-maRegie-desktop.gif');
+    background-position: center 35%;
+    mix-blend-mode: darken;
+    //   opacity: .5;
+    filter: sepia(70%) grayscale(.6);
+}
+
+.header-pic-text {
+    mix-blend-mode: darken;
+}

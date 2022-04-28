@@ -1,0 +1,139 @@
+<div class="header-pic-top">
+    <div class="arrow-down">
+        <a href="/project-front-portrait#container" class="scroll-down-arrow-wrap">
+            <div class="scroll-arrow">
+                <span></span><span></span>
+            </div>
+        </a>
+    </div>
+    <span class="header-pic-text">Front portrait</span>
+</div>
+<div class="shadow-box-separator"></div>
+
+<div id="container" class="container">
+
+    <div class="top-control-container">
+        <a [routerLink]="['/photos']" fragment="project-front-portrait"
+            class="project-back corner-project-back lone-arrow">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to Projects</span>
+        </a>
+    </div>
+
+    <div class="zoom-btn">
+        <div id="zoomBtn" (click)="zoomOnClick($event)">
+            <fa-icon *ngIf="!isZoom" [icon]="fa_searchPlus"></fa-icon>
+            <fa-icon *ngIf="isZoom" [icon]="fa_searchMinus"></fa-icon>
+            <span>{{ isZoom? 'Zoom out':'Zoom in'}}</span>
+        </div>
+    </div>
+
+    <div id="section1" class="section1">
+        <img-comparison-slider [value]="50" class="slider-with-animated-handle slider-focus slider-with-shadows"
+            [ngClass]="{zoom: isZoom}">
+            <figure slot="first" class="before">
+                <img height="100%" src="/assets/images/work/photos/IMG_6966.webp">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img height="100%" src="/assets/images/work/photos/IMG_6966f.webp">
+                <figcaption>After</figcaption>
+            </figure>
+
+            <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                    vector-effect="non-scaling-stroke"></path>
+            </svg>
+        </img-comparison-slider>
+
+        <div class="zone1">
+            <h1>Front portrait</h1>
+
+            <p>
+                <span class="second-title">Back story:</span> <br>
+                I used to stay up at night working, so sometimes I go to events without sleeping. As a result, I had
+                puffy eyes In this shot. <br>
+                Below are some of the settings for Geeks:
+            </p>
+
+            <div class="specs-table">
+                <span>ISO:</span> <span>100</span>
+                <span>Focal ratio:</span> <span>F/5.6</span>
+                <span>Shutter speed:</span> <span>1/160</span>
+                <span>Focal length:</span> <span>85mm</span>
+            </div>
+        </div>
+        <div class="arrow-down">
+            <a href="/project-front-portrait#section2" class="scroll-down-arrow-wrap">
+                <div class="scroll-arrow">
+                    <span></span><span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="shadow-box-separator"></div>
+
+    <div class="header-pic"></div>
+
+    <div id="section2" class="section2">
+        <p>
+            This picture is a showcase for fixing puffy eyes, and cleaning skin.
+        </p>
+        <h3>Work done</h3>
+        <div class="grid-1">
+            <p>
+                <span class="title3">Color correction:</span>
+                Correcting colors to restore the natural skin color and make the face pop a little more in the picture
+                since the color of the skin is so close to the color of the umbrella behind.
+            </p>
+        </div>
+        <div class="grid-2">
+            <img-comparison-slider [value]="65"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview"
+                [ngClass]="{zoom: isZoom}">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_6966-1.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_6966-1f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+            <p>
+                <span class="title3">Skin retouching:</span>
+                The skin looks rough, so it required some touch-ups and some "skin care".
+                <br>Remove spots and pimples, and retain the natural skin look. We don't want to over do it for men.
+            </p>
+        </div>
+        <div class="grid-2-i">
+            <p>
+                <span class="title3">Fixing puffy eyes:</span>
+                Puffy eyes can make you look tired or less attractive, that's definitely my case, so I fixed that.
+                <br>There are many techniques to do it, for me I find cloning and repainting is the best mathode that
+                works for me.
+            </p>
+            <img-comparison-slider [value]="50"
+                class="slider-with-animated-handle slider-focus slider-with-shadows small-preview"
+                [ngClass]="{zoom: isZoom}">
+                <figure slot="first" class="before">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_6966-2.webp">
+                </figure>
+                <figure slot="second" class="after">
+                    <img loading="lazy" height="300" width="300" src="/assets/images/work/photos/details/IMG_6966-2f.webp">
+                </figure>
+
+                <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                    <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                        vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
+        </div>
+    </div>
+
+
+</div>

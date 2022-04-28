@@ -1,0 +1,231 @@
+//colors
+$yellow: #ffd42d;
+$blue: #1544c0;
+$orange: #f86449;
+$perpel: #5210ac;
+$white: #fff;
+$black: #282936;
+$darkgray: #333;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+.blob {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .2;
+    max-width: 80vw;
+    max-height: 80vw;
+    min-width: 300px;
+    min-height: 300px;
+    background-color: $yellow;
+
+    animation: spin2 6s infinite linear;
+    mix-blend-mode: overlay;
+}
+
+@keyframes spin2 {
+    from { 
+        opacity: .2;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    to { 
+        opacity: .2;
+        transform: rotate(-360deg); 
+    }
+  }
+  @-webkit-keyframes spin {
+    from { 
+        opacity: .2;
+        transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    to { 
+        opacity: .2;
+        transform: rotate(-360deg); 
+    }
+  }
+
+
+/* ------------------ Workers --------------------*/
+.workers {
+    position: relative;
+    width: 400px;
+    height: 185px;
+    margin: 90px auto 0px;
+    background-image: url("/assets/images/svg/workers.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    background-size: 100%;
+}
+
+.workers .left_hand {
+    width: 80px;
+    height: 74px;
+    background-image: url("/assets/images/svg/hand.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    background-size: 100%;
+    position: absolute;
+    left: 102px;
+    top: 29px;
+    z-index: 2;
+    -moz-animation: 0.4s ease 0s normal none infinite left_hand;
+    -moz-transform-origin: 85% 65%;
+    -webkit-animation: left_hand 0.4s infinite ease-in-out;
+    -webkit-transform-origin: 85% 65%;
+    -o-animation: 0.4s ease 0s normal none infinite left_hand;
+    -o-animation: left_hand 0.4s infinite ease-in-out;
+    -o-transform-origin: 85% 65%;
+    -ms-animation: 0.4s ease 0s normal none infinite left_hand;
+    -ms-animation: left_hand 0.4s infinite ease-in-out;
+    -ms-transform-origin: 85% 65%;
+    animation: 0.4s ease 0s normal none infinite left_hand;
+    animation: left_hand 0.4s infinite ease-in-out;
+    transform-origin: 85% 65%;
+}
+
+@-moz-keyframes left_hand {
+    0%{-moz-transform:rotate(-23deg)}
+    50%{-moz-transform:rotate(1deg)}
+    100%{-moz-transform:rotate(-23deg)}
+}
+
+@-webkit-keyframes left_hand {
+    0%{-webkit-transform:rotate(-23deg)}
+    50%{-webkit-transform:rotate(1deg)}
+    100%{-webkit-transform:rotate(-23deg)}
+}
+
+@-o-keyframes left_hand {
+    0%{-o-transform:rotate(-23deg)}
+    50%{-o-transform:rotate(1deg)}
+    100%{-o-transform:rotate(-23deg)}
+}
+
+@-ms-keyframes left_hand {
+    0%{-ms-transform:rotate(-23deg)}
+    50%{-ms-transform:rotate(1deg)}
+    100%{-ms-transform:rotate(-23deg)}
+}
+
+@keyframes left_hand {
+    0%{transform:rotate(-23deg)}
+    50%{transform:rotate(1deg)}
+    100%{transform:rotate(-23deg)}
+}
+
+.workers .right_hand {
+    width: 73px;
+    height: 87px;
+    position: absolute;
+    background-image: url("/assets/images/svg/hand2.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: transparent;
+    background-size: 100%;
+    right: 125px;
+    top: -7px;
+    -moz-animation: 0.5s ease 0s normal none infinite right_hand;
+    -moz-transform-origin: 15% 85%;
+    -webkit-animation: right_hand 0.5s infinite ease-in-out;
+    -webkit-transform-origin: 15% 85%;
+    -o-animation: 0.5s ease 0s normal none infinite right_hand;
+    -o-animation: right_hand 0.5s infinite ease-in-out;
+    -o-transform-origin: 15% 85%;
+    -ms-animation: 0.5s ease 0s normal none infinite right_hand;
+    -ms-animation: right_hand 0.5s infinite ease-in-out;
+    -ms-transform-origin: 15% 85%;
+    animation: 0.5s ease 0s normal none infinite right_hand;
+    animation: right_hand 0.5s infinite ease-in-out;
+    transform-origin: 15% 85%;
+}
+
+@-moz-keyframes right_hand {
+    0%{-moz-transform:rotate(55deg)}
+    50%{-moz-transform:rotate(1deg)}
+    100%{-moz-transform:rotate(55deg)}
+}
+
+@-webkit-keyframes right_hand {
+    0%{-webkit-transform:rotate(55deg)}
+    50%{-webkit-transform:rotate(1deg)}
+    100%{-webkit-transform:rotate(55deg)}
+}
+
+@-o-keyframes right_hand {
+    0%{-o-transform:rotate(55deg)}
+    50%{-o-transform:rotate(1deg)}
+    100%{-o-transform:rotate(55deg)}
+}
+
+@-ms-keyframes right_hand {
+    0%{-ms-transform:rotate(55deg)}
+    50%{-ms-transform:rotate(1deg)}
+    100%{-ms-transform:rotate(55deg)}
+}
+
+@keyframes right_hand {
+    0%{transform:rotate(55deg)}
+    50%{transform:rotate(1deg)}
+    100%{transform:rotate(55deg)}
+}
+
+h3 {
+    font-size: 29px;
+    line-height: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.title{
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    line-height: 28px;
+    margin: 25px 10px 55px 10px;
+    z-index: 3;
+}
+
+@media (max-width: 500px) {
+
+    .title {
+        margin-bottom: 35px;
+    }
+
+    .workers {
+        width: 290px;
+        height: 125px;
+        margin: 40px auto 0px;
+    }
+    .workers .right_hand {
+        width: 52px;
+        height: 65px;
+        right: 93px;
+        top: -10px;
+    }
+    .workers .left_hand {
+        width: 53px;
+        height: 48px;
+        left: 77px;
+        top: 18px;
+    }
+}
+
+/* ------------------ /Workers --------------------*/
