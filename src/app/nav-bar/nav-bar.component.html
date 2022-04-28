@@ -14,7 +14,7 @@
     <li [routerLink]="['/contact']">Contact</li>
   </ul>
 
-  <a class="mob-nav-btn" (click)="toggleCollapse()" [ngClass]="BtnCollapseCss()"></a>
+  <a id="mob-nav-btn" class="mob-nav-btn" (click)="toggleCollapse()" [ngClass]="BtnCollapseCss()"></a>
 
   <div *ngIf="isCollapsed" class="mob-nav">
     <ul>

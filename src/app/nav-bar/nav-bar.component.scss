@@ -112,7 +112,7 @@
     }
 
     .activeCollapse::before, .activeCollapse::after {
-        background-color: white !important; 
+        background-color: white; 
       }
     /*
     ul li:first-child {
@@ -154,7 +154,7 @@
     left: 14px;
     right: 14px;
     bottom: 14px;
-    background-color: #FFF;
+    background-color: #fff;
     -webkit-transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
     -moz-transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
     transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
@@ -266,6 +266,7 @@
     .mob-nav-btn::before, .mob-nav-btn::after {
       content: '';
       position: absolute;
+      mix-blend-mode: difference;
       height: 2px;
       width: 60%;
       left: 20%;
@@ -543,3 +544,19 @@
         -o-transform: skewY(-22deg);
         transform: skewY(-22deg); 
     }
+
+
+    .light-color-arrow {
+      .scroll-arrow span::before, 
+      .scroll-arrow span::after {
+        background-color: black !important;
+      }
+      .back-to-top-arrow-wrap:hover span::before, .back-to-top-arrow-wrap:hover span::after {
+        background-color: #1544c0 !important;
+      }
+    }
+
+    .light-color-burger::before,
+    .light-color-burger::after {
+        background-color: black !important; 
+      } 

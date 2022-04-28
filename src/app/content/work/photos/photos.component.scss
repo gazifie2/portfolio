@@ -4,6 +4,7 @@
     justify-items: center;
     //background-color: #333333;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 q {
@@ -67,25 +68,27 @@ padding: 1px 3px;
 
 .img-wrap {
   display: flex;
+  position: relative;
   border-radius: 10px;
   overflow: hidden;
   //justify-items: center;
   //align-items: center;
-  transition: filter 0.5s cubic-bezier(.25,.8,.25,1);
+  transition: filter 0.5s cubic-bezier(.25,.8,.25,1), transform 0.5s cubic-bezier(.25,.8,.25,1);
   font-size: 6vw;
   color: white;
   text-decoration: none;
 }
 
 .img-wrap:hover {
-  filter: drop-shadow(0px 0px 5px black);
+  filter: drop-shadow(0px 0px 5px rgba(black, .7));
   cursor: pointer;
+  transform: scale(1.007);
   & img {
-    filter: saturate(120%);
+    filter: saturate(130%) sepia(30%);
   } 
 }
 
-.img-wrap::after{
+.img-wrap::after {
   content: 'See details';
   position: absolute;
   bottom: -40%;
@@ -100,9 +103,9 @@ padding: 1px 3px;
 .img-wrap:hover::after{
   padding: 25% 0 10% 0;
   transform: translateY(-60%);
-  background: -moz-linear-gradient(0deg, rgba(0,0,0,0.8148999160595154) 20%, rgba(0,0,0,0.6997313767336728) 56%, rgba(0,0,0,0) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.8148999160595154) 20%, rgba(0,0,0,0.6997313767336728) 56%, rgba(0,0,0,0) 100%);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.815) 20%, rgba(0,0,0,0.6997313767336728) 56%, rgba(0,0,0,0) 100%);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.5) 56%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.5) 56%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 20%, rgba(0,0,0,0.5) 56%, rgba(0,0,0,0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
@@ -115,9 +118,10 @@ padding: 1px 3px;
 
 img {
   display: block;
+  position: relative;
   max-height: fit-content;
   height: auto;
   width: 100%;
   object-fit: cover;
-  transition: filter 0.5s
+  transition: filter 0.5s;
 }

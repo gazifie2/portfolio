@@ -73,6 +73,22 @@ export class NavBarComponent implements OnInit {
       document.getElementById("scrollTopBtn")?.classList.remove('showScrollTopBtn');
       document.getElementById("scrollTopBtn")?.classList.add('hidden');
     }
+
+    //////
+
+    var colorSwitchArrow = sessionStorage.getItem('switch-arrow-color');
+    var colorSwitchBurger = sessionStorage.getItem('switch-burger-color');
+    //console.log(colorSwitchArrow);
+    if (colorSwitchArrow == 'true') {
+      (document.getElementById('scrollTopBtn')as HTMLElement).classList.add('light-color-arrow');
+    } else {
+      (document.getElementById('scrollTopBtn')as HTMLElement).classList.remove('light-color-arrow');
+    }
+    if (colorSwitchBurger == 'true') {
+      (document.getElementById('mob-nav-btn')as HTMLElement).classList.add('light-color-burger');
+    } else {
+      (document.getElementById('mob-nav-btn')as HTMLElement).classList.remove('light-color-burger');
+    }
   };
 
   scrollTop(el: any) {

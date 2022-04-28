@@ -1,0 +1,133 @@
+<div class="container">
+
+    <div class="top-control-container">
+        <a [routerLink]="['/photos']" class="project-back corner-project-back lone-arrow">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to Projects</span>
+        </a>
+    </div>
+
+    <div class="zoom-btn">
+        <div id="zoomBtn" (click)="zoomOnClick($event)">
+            <i *ngIf="!isZoom" class="fa fa-search-plus"></i> <i *ngIf="isZoom" class="fa fa-search-minus"></i>
+            <span>{{ isZoom? 'Zoom out':'Zoom in'}}</span>
+        </div>
+    </div>
+
+    <div id="section1" class="section1">
+        <img-comparison-slider [value]="50" class="slider-with-animated-handle slider-focus slider-with-shadows"
+            [ngClass]="{zoom: isZoom}">
+            <figure slot="first" class="before">
+                <img height="100%" src="/assets/images/work/photos/IMG_7791.jpg">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img height="100%" src="/assets/images/work/photos/IMG_7791f.jpg">
+                <figcaption>After</figcaption>
+            </figure>
+
+            <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+                <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                    vector-effect="non-scaling-stroke"></path>
+            </svg>
+        </img-comparison-slider>
+
+        <div class="zone1">
+            <h1>The thinker</h1>
+
+            <p>
+                <span class="second-title">Back story:</span> <br>
+                I took this shot back in 2020 for my Fiancée during the blue hour, at Yadis beach, Djerba. <br>
+                Below are some of the settings for Geeks:
+            </p>
+
+            <div class="specs-table">
+                <span>ISO:</span> <span>400</span>
+                <span>Focal ratio:</span> <span>F/1.8</span>
+                <span>shutter speed:</span> <span>1/60</span>
+                <span>Focal length:</span> <span>50mm</span>
+            </div>
+        </div>
+        <div class="arrow-down">
+            <a href="/project-thinker-portrait#section2" class="scroll-down-arrow-wrap">
+                <div class="scroll-arrow">
+                    <span></span><span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="shadow-box-separator"></div>
+
+    <div class="header-pic"></div>
+    
+    <div id="section2"  class="section2">
+        <h3>Details you might have missed</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repudiandae reiciendis distinctio ad
+            consequuntur odit voluptas maxime earum ex natus labore, quaerat quasi dignissimos iure? Ducimus esse
+            temporibus
+            architecto mollitia. <br> <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quod qui, quis dignissimos nostrum,
+            harum
+            veniam eum soluta ad laboriosam rerum odio, doloribus iusto eos accusantium vel ullam quibusdam tempora!
+        </p>
+    </div>
+
+
+</div>

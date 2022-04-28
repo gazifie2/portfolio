@@ -172,7 +172,7 @@ function zoomIn(originX?: any, originY?: any) {
       })
     ], optional),
     query(':enter', [
-      style({ top: '55px', 'transform-origin': originX + ' ' + originY, transform: 'scale(0.5)', opacity: 0 })
+      style({ top: '43px', 'transform-origin': originX + ' ' + originY, transform: 'scale(0.5)', opacity: 0 })
     ]),
     group([
       query(':leave', [
@@ -192,7 +192,7 @@ function zoomOut(originX?: any, originY?: any) {
     query(':enter, :leave', [
       style({
         position: 'absolute',
-        top: '55px', //the exact number to prevent outlets from shifting up/down when sliding
+        top: '43px', //the exact number to prevent outlets from shifting up/down when sliding
         transform: 'scale(1)',
         'transform-origin': originX + ' ' + originY,
         width: '100%',
@@ -207,7 +207,7 @@ function zoomOut(originX?: any, originY?: any) {
         animate('300ms ease-in-out', style({ 'transform-origin': originX + ' ' + originY, transform: 'scale(0.5)', opacity: 0 }))
       ], optional),
       query(':enter', [
-        animate('300ms ease-in-out', style({ top: '43px', transform: 'scale(1)', opacity: 1 }))
+        animate('300ms ease-in-out', style({ transform: 'scale(1)', opacity: 1 }))
       ])
     ]),
   ];
