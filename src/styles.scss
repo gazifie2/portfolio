@@ -1,0 +1,158 @@
+//colors
+$yellow: #ffd42d;
+$blue: #1544c0;
+$orange: #f86449;
+$perpel: #5210ac;
+
+@font-face {
+    font-family: "Ginger Regular";
+    src: local("league-spartan"), url(./assets/fonts/f37ginger-regular-webfont.bde140e3.woff) format("truetype");
+}
+    @font-face {
+    font-family: "league-spartan";
+    src: local("league-spartan"), url(./assets/fonts/league-spartan.bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Abilane";
+    src: local("Abilane"), url(./assets/fonts/AbilaneFreeTrial-MV3Pp.otf) format("truetype");
+}
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+
+
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "league-spartan", "Abilane";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html, body {
+    height: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Ginger Regular' ;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth !important;
+    background-color: rgb(1, 65, 108); //to fix color transition from welcome page to other pages since gradiant is not supported
+    background-size: cover;
+  }
+
+
+  //back btn
+  .corner-project-back {
+    position: relative;
+    float: right;
+    right: 3vw;
+    margin: 0.5rem 0;
+    z-index: 4;
+  }
+
+  $backBtnColor: white;
+    html.safari-browser .corner-project-back span.text {
+      color: $backBtnColor !important;
+    }
+
+    .project-back span {
+      color: $backBtnColor;
+    }
+  
+    .project-back .arrow-tip {
+      border-right: 3px solid $backBtnColor;
+    }
+  
+    .project-back .arrow-length {
+      background-color: $backBtnColor;
+    }
+  
+    .project-back.project-footer-next-project span,
+    .project-back.project-footer-prev-project span {
+        color: $backBtnColor;
+    }
+  
+    .project-back.project-footer-next-project .arrow-tip,
+    .project-back.project-footer-prev-project .arrow-tip {
+      border-right: 3px solid #fff;
+    }
+  
+    .project-back.project-footer-next-project .arrow-length,
+    .project-back.project-footer-prev-project .arrow-length {
+      background-color: #fff;
+    }
+  
+    html.safari-browser .corner-project-back span.text {
+      color: #212121 !important;
+    }
+
+  .lone-arrow {
+    width: 18px;
+    height: 20px; 
+  }
+  .lone-arrow span.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .lone-arrow .arrow-length {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    left: 16%;
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+  }
+  .lone-arrow .arrow-tip {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid #fff;
+    margin-top: -2px; 
+  }
+  .lone-arrow span.arrow span {
+    -webkit-transition: 0.45s cubic-bezier(0.7, 0.3, 0, 1);
+    -moz-transition: 0.45s cubic-bezier(0.7, 0.3, 0, 1);
+    transition: 0.45s cubic-bezier(0.7, 0.3, 0, 1); 
+  }
+  .lone-arrow span.arrow:nth-child(2) span {
+    -webkit-transform: translateX(22px);
+    -moz-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    -o-transform: translateX(22px);
+    transform: translateX(22px); 
+  }
+  .lone-arrow span.text {
+    right: 200%;
+    top: 50%;
+    position: absolute;
+    white-space: nowrap;
+    text-transform: uppercase;
+    -webkit-transform: translateX(0px) translateY(-50%);
+    -moz-transform: translateX(0px) translateY(-50%);
+    -ms-transform: translateX(0px) translateY(-50%);
+    -o-transform: translateX(0px) translateY(-50%);
+    transform: translateX(0px) translateY(-50%); 
+  }
+  .lone-arrow:hover span.arrow:nth-child(1) span {
+    -webkit-transform: translateX(-22px);
+    -moz-transform: translateX(-22px);
+    -ms-transform: translateX(-22px);
+    -o-transform: translateX(-22px);
+    transform: translateX(-22px); 
+  }
+  .lone-arrow:hover span.arrow:nth-child(2) span {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition-delay: 0.16s;
+    -moz-transition-delay: 0.16s;
+    transition-delay: 0.16s;
+  }

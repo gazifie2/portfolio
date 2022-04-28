@@ -1,0 +1,9 @@
+<div class="wrapColor"></div>
+
+<div id="wrapper" [ngStyle]="{background: backgroundWrapColor}">
+  <app-nav-bar></app-nav-bar>
+  <div [@routeSlideAnimation]="prepareRouteAnimation(outlet)" [@routeZoomAnimation]="prepareRouteDepth(outlet)" [@routeFadingAnimation]="prepareRouteFade(outlet)" >
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>
+

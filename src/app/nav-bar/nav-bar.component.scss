@@ -1,0 +1,544 @@
+// navBar styling
+#navBar {
+    position: relative;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 0;
+    padding-top: 1rem;
+    z-index: 100;
+    text-transform: uppercase;
+    //border: solid red;
+    width: 100%;
+    //background-color: rgba($color: #000000, $alpha: 0.1);
+    background: linear-gradient(180deg, rgba(2,0,36,0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    text-align: center;
+    transition: color 600ms;
+}
+
+#navBar ul li:last-child {
+    color: orangered;
+    float: right;
+    margin-right: 2rem;
+    margin-left: -6rem; //to keep the rest of the nav btn centred
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    padding-bottom: 0.2rem;
+}
+
+.brand {
+    color: white;
+    float: left;
+    margin-top: 10px;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-decoration: none;
+}
+
+.activeSwitchColor {
+    .activeCollapse::before, .activeCollapse::after {
+        background-color: black !important; 
+      }
+
+    color: black !important;
+
+    .brand {
+        color: black !important;
+    }
+
+    .scroll-arrow span::before, .scroll-arrow span::after {
+        background-color: black !important;
+    }
+
+    .back-to-top-arrow-wrap:hover span::before, .back-to-top-arrow-wrap:hover span::after {
+        background-color: #1544c0 !important;
+}
+    
+    .navbar-collapse .router-link-active {
+        color: #1544c0 !important;
+    }
+    
+    ul li {
+        margin: 0 3rem 0 0;
+        display: inline;
+        cursor: pointer;
+        border-bottom: solid 1px transparent;
+        border-width: 0;
+        transition: border-bottom ease-in-out 0.2s;
+    }
+    ul li:hover {
+        color: #1544c0;
+        border-bottom: solid 2px #1544c0;
+    }
+    /*
+    ul li:first-child {
+        float: left;
+        margin-right: 2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1rem;
+        &:hover {
+            color: black;
+            border: 0;
+        }
+    }
+    */
+}
+
+.notactiveSwitchColor {
+    .navbar-collapse .router-link-active {
+        color: yellow !important;
+    }
+    
+    .back-to-top-arrow-wrap:hover span::before, .back-to-top-arrow-wrap:hover span::after {
+            background-color: yellow !important;
+    }
+    
+    ul li {
+        margin: 0 3rem 0 0;
+        display: inline;
+        cursor: pointer;
+        border-bottom: solid 1px transparent;
+        border-width: 0;
+        transition: border-bottom ease-in-out 0.2s;
+    }
+    ul li:hover {
+        color: yellow;
+        border-bottom: solid 2px yellow;
+    }
+
+    .activeCollapse::before, .activeCollapse::after {
+        background-color: white !important; 
+      }
+    /*
+    ul li:first-child {
+        float: left;
+        margin-right: 2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1rem;
+        &:hover {
+            color: white;
+            border: 0;
+        }
+    }
+    */
+}
+
+/*
+#navBar ul li::after {
+    border-bottom: solid 1px yellow;
+    transition: all 0.3s;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 24px;
+    bottom: 0;
+}
+
+#navBar ul li:hover:after {
+    width: 100%;
+}
+*/
+
+
+
+//Styling mobile nav
+.mob-nav {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    background-color: #FFF;
+    -webkit-transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
+    -moz-transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
+    transition: 0.55s cubic-bezier(0.52, 0.01, 0.16, 1);
+
+    z-index: 100;
+    text-align: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity .32s .4s;
+    & ul {
+        padding: 0;
+        display: grid;
+        text-align: center;
+        text-decoration: none;
+        //margin-top: 5rem;
+        margin-bottom: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+
+        text-transform: uppercase;
+        font-size: 2.5vh;
+        font-weight: 500;
+        text-decoration: none;
+        list-style: none;
+
+        @media screen and (max-height:600px) {
+            top: 5%;
+            bottom: 40%;
+            margin: 0;
+        }
+    }
+}
+
+.mob-nav a, .mob-nav h3 {
+  color: #212121; 
+  z-index: 100;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.mob-nav > div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    font-size: 1vh;
+    @media screen and (max-height:600px) {
+        margin: 0 !important;
+        top: 80%;
+        bottom: 50%;
+    }
+}
+
+.mob-nav div ol li {
+    display: inline-flex;
+    margin: 0.7rem;
+    font-size: 1.5vh;
+    @media screen and (max-height:600px) {
+        margin: 0 !important;
+        top: 80%;
+        bottom: 50%;
+    }
+}
+
+.mob-nav > div > h3 {
+    display: inline-flex;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    //margin-left: 1rem !important;
+   
+}
+
+.mob-nav ul a {
+    margin: 1.5rem 0 !important;
+    &:hover {
+        color: orangered;
+    }
+}
+
+.mob-nav .router-link-active {
+    color: rgb(255, 195, 85);
+}
+
+
+// Styling burger btn
+.mob-nav-btn {
+    position: fixed;
+    right: 25px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 101;
+    @media screen and (max-height:600px) {
+        transform: scale(-0.5);
+    }
+}
+
+.activeCollapse  {
+    top: .5rem; //same level, in the middle, as the brand (1rem)
+}
+
+    .mob-nav-btn::before, .mob-nav-btn::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 60%;
+      left: 20%;
+      top: 50%;
+      margin-top: -1px;
+      //background-color: #212121;
+      -webkit-transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+      -moz-transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+      transition: 0.29s cubic-bezier(0.52, 0.01, 0.16, 1);
+    }
+    .mob-nav-btn::before {
+      -webkit-transform: rotate(0deg) translateY(-5px);
+      -moz-transform: rotate(0deg) translateY(-5px);
+      -ms-transform: rotate(0deg) translateY(-5px);
+      -o-transform: rotate(0deg) translateY(-5px);
+      transform: rotate(0deg) translateY(-5px); 
+    }
+    .mob-nav-btn::after {
+      -webkit-transform: rotate(0deg) translateY(5px);
+      -moz-transform: rotate(0deg) translateY(5px);
+      -ms-transform: rotate(0deg) translateY(5px);
+      -o-transform: rotate(0deg) translateY(5px);
+      transform: rotate(0deg) translateY(5px); 
+    }
+    
+
+    .navbar-collapse{
+        @media screen and (max-width:700px) {
+            //display: none; // !!!!!
+            padding: 0;
+            pointer-events: none;
+            opacity: 0;
+            > li:last-child { //this fixes the left drift when collapse
+                display: none !important;
+            }
+        }
+    }
+
+    //only hide the burger mob-nav-btn when the menu in collapsed (hidden)
+    @media only screen and (min-width: 700px) {
+        .activeCollapse {
+            display: none; 
+        }
+    }
+ 
+
+ .activeCollapse { // when menu is collapsed (hidden), hide menu, and the original extended navbar behind
+    .mob-nav {
+        display: none;
+    }
+ }
+
+ .notactiveCollapse { // when menu is expended (shown)
+    
+ }
+    
+    .notactiveCollapse::before {
+      -webkit-transform: rotate(45deg) translateY(0);
+      -moz-transform: rotate(45deg) translateY(0);
+      -ms-transform: rotate(45deg) translateY(0);
+      -o-transform: rotate(45deg) translateY(0);
+      transform: rotate(45deg) translateY(0); 
+    }
+    .notactiveCollapse::after {
+      -webkit-transform: rotate(-45deg) translateY(0);
+      -moz-transform: rotate(-45deg) translateY(0);
+      -ms-transform: rotate(-45deg) translateY(0);
+      -o-transform: rotate(-45deg) translateY(0);
+      transform: rotate(-45deg) translateY(0); 
+    }
+    .notactiveCollapse::before, .notactiveCollapse::after {
+      background-color: #212121; 
+    }
+    .notactiveCollapse:hover::before, .notactiveCollapse:hover::after {
+        background-color: orangered; 
+    }
+
+    .mob-profile-social-links {
+        list-style: none;
+        padding: 0px !important;
+        //float: left;
+        //width: 25%;
+        text-align: center;
+      }
+
+      .mob-profile-social-links li a {
+        display: inline-block;
+        //color: white;
+        width: auto;
+        height: auto;
+        padding: 8px;
+        margin: 16px;
+        position: relative;
+        overflow: hidden!important;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        transform: scale(1.5);
+        transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+      }
+      
+      .mob-profile-social-links li a i {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .mob-profile-social-links li a img,
+      .mob-profile-social-links li a svg {
+        width: 24px;
+      }
+
+    .mob-profile-social-links li a:hover {
+        //filter: drop-shadow(0 0 2px orangered);
+        //text-shadow: 0 0 5px orangered;
+        cursor: pointer;
+        color: orangered;
+        transform: scale(1.75);
+    }
+        
+///////////
+/*
+#scrollTopBtn{
+    //visibility: hidden;
+    opacity: 0;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer; 
+    padding: auto; 
+    border-radius: 50%; 
+    font-size: 1.5rem; 
+    transition: opacity 0.2s ease-in-out;
+  }
+  */
+
+  
+  
+  .showScrollTopBtn {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto;
+  }
+
+  .hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    //visibility: hidden !important;
+  }
+
+
+  ////////back to top btn animated
+
+  .back-to-top-arrow-wrap {
+    opacity: 0;
+    position: fixed;
+    left: auto;
+    right: 25px;
+    top: 70px; // fin interfering with contact btn
+    -webkit-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
+    -moz-transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
+    transition: 0.45s cubic-bezier(0.52, 0.01, 0.16, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 50px;
+    height: 40px;
+    margin: -20px 0 0 -25px;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); 
+  }
+
+  @media screen and (max-width: 700px) {
+    .back-to-top-arrow-wrap {
+      top: 80px
+    }
+  }
+  .back-to-top-arrow-wrap .scroll-arrow {
+    position: relative; 
+  }
+  .back-to-top-arrow-wrap .scroll-arrow span {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important; 
+  }
+
+    .scroll-arrow-wrap:hover, .back-to-top-arrow-wrap:hover {
+        cursor: pointer; 
+    }
+    
+        .scroll-arrow-wrap:hover span::before, .back-to-top-arrow-wrap:hover span::before {
+          -webkit-transform: skewY(32deg);
+          -moz-transform: skewY(32deg);
+          -ms-transform: skewY(32deg);
+          -o-transform: skewY(32deg);
+          transform: skewY(32deg); 
+        }
+        .scroll-arrow-wrap:hover span::after, .back-to-top-arrow-wrap:hover span::after {
+          -webkit-transform: skewY(-32deg);
+          -moz-transform: skewY(-32deg);
+          -ms-transform: skewY(-32deg);
+          -o-transform: skewY(-32deg);
+          transform: skewY(-32deg); 
+        }
+
+          ///
+
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 20px;
+    height: 2px;
+    margin: -1px 0 0 -10px; 
+}
+    .scroll-arrow span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-animation: arrowpointing forwards infinite 3s cubic-bezier(0.52, 0.01, 0.16, 1);
+      -moz-animation: arrowpointing forwards infinite 3s cubic-bezier(0.52, 0.01, 0.16, 1);
+      animation: arrowpointing forwards infinite 3s cubic-bezier(0.52, 0.01, 0.16, 1); 
+    }
+      @media only screen and (max-width: 800px) {
+        .scroll-arrow span {
+          -webkit-animation: none !important;
+          -moz-animation: none !important;
+          animation: none !important; } 
+        }
+      .scroll-arrow span::before, .scroll-arrow span::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        width: 50%;
+        background-color: #fff;
+        -webkit-transform: skewY(22deg);
+        -moz-transform: skewY(22deg);
+        -ms-transform: skewY(22deg);
+        -o-transform: skewY(22deg);
+        transform: skewY(22deg);
+        -webkit-transform-origin: 50% 100%;
+        -moz-transform-origin: 50% 100%;
+        -ms-transform-origin: 50% 100%;
+        -o-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-transition: 0.36s cubic-bezier(0.7, 0.3, 0, 1);
+        -moz-transition: 0.36s cubic-bezier(0.7, 0.3, 0, 1);
+        transition: 0.36s cubic-bezier(0.7, 0.3, 0, 1); 
+    }
+      .scroll-arrow span:nth-child(2) {
+        -webkit-animation-delay: 1.5s;
+        -moz-animation-delay: 1.5s;
+        animation-delay: 1.5s; 
+    }
+      .scroll-arrow span::before {
+        left: 0; }
+      .scroll-arrow span::after {
+        left: 50%;
+        -webkit-transform: skewY(-22deg);
+        -moz-transform: skewY(-22deg);
+        -ms-transform: skewY(-22deg);
+        -o-transform: skewY(-22deg);
+        transform: skewY(-22deg); 
+    }

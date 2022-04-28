@@ -1,0 +1,89 @@
+<aside class="profile-card">
+    <header>
+        <!-- here’s the avatar -->
+        <a>
+            <img src="/assets/images/pic_portfolio-720.png" class="hoverZoomLink">
+        </a>
+
+        <!-- the username -->
+        <h1>
+            Ghazi Boubaker
+        </h1>
+
+        <!-- and role or location -->
+        <div class="content">
+
+            <div class="content__container">
+                <ul class="content__container__list">
+                    <li class="content__container__list__item">Full stack developer</li>
+                    <li class="content__container__list__item">Photographer</li>
+                    <li class="content__container__list__item">Videographer</li>
+                    <li class="content__container__list__item">IT consultant</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <h2 class="downloadcv">
+            <a href="/assets/images/camera-lens-crop415.jpg" download>Download my cv</a>
+        </h2>
+
+    </header>
+
+    <!-- bit of a bio; who are you? -->
+    <div class="profile-bio">
+
+        <p>
+            Hello, This is Ghazi. <br>
+            I'm {{age}} years old and I'm based in <a target="_blank" blank href={{googleEarthUrl}}>Tunis,
+                Tunisia</a>.<br>
+            I fell in love with computers at the age of 8, I started by learning multimedia, such as sound recordnig
+            (Sound forge), photo manipulation (Photoshop 4), interactive apps and UI design (Director 8 and Macromedia
+            Flash). <br>
+            Later I started learning about what's under the hood, I started building and fixing computers, and since then I've never
+            stoped.
+            I started learning about data structure and algorithm in 2009. <br>
+            <br>
+            Having the opportunity to learn from an early age has led me to acquire a multidisciplinary skill.<br>
+            Then, I had the chance to work in the fields that I appreciate, which allowed me to deepen my
+            experteese.<br>
+            <span>
+                <ol style="list-style:disc;">
+                    <li>I have been working in a communication team as a photo|videographer since 2016</li>
+                    <li>I took the responsibility of IT manager in 2018</li>
+                    <li>I'm a full stack developer since 2018</li>
+                </ol>
+            </span>
+            Feel free to download my CV, see <a [routerLink]="['/work']">my work</a> and <a
+                [routerLink]="['/contact']">contact me</a>!
+
+        </p>
+    </div>
+
+    <!-- some social links to show off -->
+    <ul class="profile-social-links">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/ghazi.boubaker.20">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.instagram.com/ghazi.lens/">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.linkedin.com/in/ghazi-boubaker-349283166/">
+
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </li>
+        <!--
+          <li>
+        <a target="_blank" href="https://github.com/vipulsaxena">
+          <i class="fa fa-github"></i>
+        </a>
+      </li>
+      -->
+    </ul>
+</aside>

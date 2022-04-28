@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="top-control-container">
+
+        <!--
+        <a href="/work" class="project-back corner-project-back lone-arrow" data-new-state="work">
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
+            <span class="text">Back to Projects</span>
+        </a>
+        -->
+
+
+
+    </div>
+
+    <div class="zoom-btn">
+        <div id="zoomBtn" (click)="zoomOnClick($event)"> <i class="fa fa-search-plus"></i> <span>{{ isZoom? 'Zoom out' : 'Zoom in'}}</span></div>
+    </div>
+
+    <img-comparison-slider [value]="5" class="slider-with-animated-handle slider-focus slider-with-shadows"
+        [ngClass]="{zoom: isZoom}">
+        <figure slot="first" class="before">
+            <img height="100%" src="/assets/images/work/photos/IMG_8831.jpg">
+            <figcaption>Before</figcaption>
+        </figure>
+        <figure slot="second" class="after">
+            <img height="100%" src="/assets/images/work/photos/IMG_8831f.jpg">
+            <figcaption>After</figcaption>
+        </figure>
+
+        <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                vector-effect="non-scaling-stroke"></path>
+        </svg>
+    </img-comparison-slider>
+
+    <img-comparison-slider [value]="5" class="slider-with-animated-handle slider-focus slider-with-shadows"
+        [ngClass]="{zoom: isZoom}">
+        <figure slot="first" class="before">
+            <img height="100%" src="/assets/images/work/photos/IMG_8879.jpg">
+            <figcaption>Before</figcaption>
+        </figure>
+        <figure slot="second" class="after">
+            <img height="100%" src="/assets/images/work/photos/IMG_8879f.jpg">
+            <figcaption>After</figcaption>
+        </figure>
+
+        <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                vector-effect="non-scaling-stroke"></path>
+        </svg>
+    </img-comparison-slider>
+
+
+    <img-comparison-slider [value]="5" class="slider-with-animated-handle slider-focus slider-with-shadows"
+        [ngClass]="{zoom: isZoom}">
+        <figure slot="first" class="before">
+            <img height="100%" src="/assets/images/work/photos/IMG_0982.jpg">
+            <figcaption>Before</figcaption>
+        </figure>
+        <figure slot="second" class="after">
+            <img height="100%" src="/assets/images/work/photos/IMG_0982ff.jpg">
+            <figcaption>After</figcaption>
+        </figure>
+
+        <svg slot="handle" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                vector-effect="non-scaling-stroke"></path>
+        </svg>
+    </img-comparison-slider>
+
+
+    <h3>Not even my final form!</h3>
+
+    <img-comparison-slider [value]="95" class="slider-with-animated-handle slider-focus slider-with-shadows"
+        [ngClass]="{zoom: isZoom}">
+        <figure slot="first" class="before">
+            <img height="100%" src="/assets/images/work/photos/me_vs_Red_Squirre1.jpg">
+            <figcaption>Before</figcaption>
+        </figure>
+        <figure slot="second" class="after">
+            <img height="100%" src="/assets/images/work/photos/me_vs_Red_Squirre2.jpg">
+            <figcaption>After</figcaption>
+        </figure>
+
+        <svg slot="handle" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
+            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
+                vector-effect="non-scaling-stroke"></path>
+        </svg>
+    </img-comparison-slider>
+
+
+</div>

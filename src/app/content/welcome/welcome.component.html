@@ -1,0 +1,19 @@
+<div class="container">
+  <span class="titleBlock">
+    <p class="titleSurrounds">Hello, I am</p>
+    <span class="title title-animation">Ghazi Boubaker</span>
+  </span>
+  <picture>
+    <source media="(min-width: 2844px)" srcset="../assets/images/pic_portfolio-2844.png">
+    <source media="(min-width: 1080px)" srcset="../assets/images/pic_portfolio-1080.png">
+    <source media="(min-width: 720px)" srcset="../assets/images/pic_portfolio-720.png">
+    <img src="../assets/images/pic_portfolio-720.png" alt="portfolio-720">
+  </picture>
+
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <span class="button-text" [routerLink]="['/about']" routerLinkActive="router-link-active">Learn More</span>
+  </button>
+</div>
