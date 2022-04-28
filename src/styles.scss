@@ -13,8 +13,8 @@ $perpel: #5210ac;
     src: local("league-spartan"), url(./assets/fonts/league-spartan.bold.ttf) format("truetype");
 }
 @font-face {
-    font-family: "Abilane";
-    src: local("Abilane"), url(./assets/fonts/AbilaneFreeTrial-MV3Pp.otf) format("truetype");
+    font-family: "Montserrat-Thin";
+    src: local("Montserrat-Thin"), url(./assets/fonts/Montserrat-Thin.ttf) format("truetype");
 }
 @import url('https://fonts.googleapis.com/css?family=Mukta:700');
 
@@ -43,7 +43,7 @@ $perpel: #5210ac;
 
   //back btn
   .corner-project-back {
-    position: relative;
+    position: absolute;
     float: right;
     right: 3vw;
     margin: 0.5rem 0;

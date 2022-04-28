@@ -1,143 +1,123 @@
-.top-control-container {
-  display: inline-block;
-}
-
-.zoom-btn{
-  
-  display: flex;
-  position: fixed;
-  cursor: pointer;
-  top: 60px;
-  left: 30px;
-  font-size: 12px;
-  z-index: 30;
-  text-align: center;
-  white-space: normal;
-  width: fit-content;
-  filter: drop-shadow(0 0 1px black);
-  & span {
-    display: flex;
-    text-align: center;
-    position: absolute;
-    top: -5px;
-    left: -10px;
-    justify-items: center;
-    align-items: center;  
-    opacity: 0;
-    transition: opacity 0.2s;
-    height: 40px;
-    width: 40px;
-  }
-  & i {
-    font-size: 1.5rem;
-    transition: color 0.2s;
-    transform: scale(1);
-    transition: transform 0.2s;
-  }
-  &:hover {
-    i {
-      cursor: pointer;
-      opacity: 0.3;
-      color: yellow;
-      transform: scale(1.5);
-    }
-    span {
-      opacity: 1;
-    }
-  }
-}
-
 .container{
+  margin-top: 30px;
     color: white;
-    display: grid;
-    grid-column: auto;
-    grid-template-columns: auto;
-    margin: 0 30px 0 30px;
     justify-items: center;
     //background-color: #333333;
+    text-align: center;
 }
 
-@media screen and (max-width: 700px) {
-  .container {
-    margin: 0 ;
-  }
-}
-@media screen and (max-width: 530px) { //zoom doesn't function on width less than than this anyway, and phones have pinch to zoom
-  .zoom-btn {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.container h3 {
-  text-align: center;
+q {
+  font-family: Montserrat-Thin;
   font-weight: 500;
+  font-size: clamp(1rem, 1vw, 3rem);
+
+  display: inline-block;
+  width: 80%;
+  margin: 30px 0;
 }
 
-img-comparison-slider {
-  max-height: max-content;
-  width: max-content;
-  max-width: 90vw;
+q > span {
+background-color: rgb(0, 0, 0);
+padding: 1px 3px;
+}
+
+.detail-btn-container {
+  display: block;
+}
+
+.image-container {
+  //outline: solid 1px red;
+  color: white;
+  display: grid;
+  grid-column: auto;
+  grid-template-columns: repeat(3, 25%);
+  gap: 20px 20px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 0 20px 0 20px;
+  //justify-items: center;
+  justify-content: center;
+  // text-align: center;
+
+}
+
+@media screen and (max-width: 950px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px ;
+  }
+  .img-wrap {
+    font-size: 10vw !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px ;
+  }
+}
+@media screen and (max-width: 500px) {
+  .image-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 20px ;
+  }
+  .img-wrap {
+    font-size: 22vw !important;
+  }
+}
+
+.img-wrap {
+  display: flex;
   border-radius: 10px;
-  margin: 1rem 0;
-  & figure img {
-    max-height: 80vh;
-    max-width: 90vw;
-  }
+  overflow: hidden;
+  //justify-items: center;
+  //align-items: center;
+  transition: filter 0.5s cubic-bezier(.25,.8,.25,1);
+  font-size: 6vw;
+  color: white;
+  text-decoration: none;
 }
 
-.slider-with-shadows {
-  --default-handle-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-  --divider-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+.img-wrap:hover {
+  filter: drop-shadow(0px 0px 5px black);
+  cursor: pointer;
+  & img {
+    filter: saturate(120%);
+  } 
 }
 
-.zoom figure img {
-  max-height: max-content;
+.img-wrap::after{
+  content: 'See details';
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  transform: translateY(0%);
+  font-weight: 500;
+  width: 101%;
+  text-shadow: 0 1px 15px black;
+  transition: padding 0.5s cubic-bezier(.25,.8,.25,1), transform 0.2s, color 0.2s;
 }
 
-.custom-animated-handle {
-    color: white;
-    font-size: larger;
-    font-weight: 200;
-    transition: transform 0.2s;
-    width: 50px;
-  }
-
-.slider-with-animated-handle:hover .custom-animated-handle {
-    transform: scale(1.3);
+.img-wrap:hover::after{
+  padding: 25% 0 10% 0;
+  transform: translateY(-60%);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,0.8148999160595154) 20%, rgba(0,0,0,0.6997313767336728) 56%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.8148999160595154) 20%, rgba(0,0,0,0.6997313767336728) 56%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.815) 20%, rgba(0,0,0,0.6997313767336728) 56%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
-.slider-focus:focus {
-    outline: none;
-    box-shadow: 0px 0px 15px 0px #0000006a;
-    scroll-behavior: smooth !important; //doesn't work yet, still snaps when focused
-  }
+.img-wrap:active::after {
+  color: orange;
+  transform: translateY(-60%) scale(1.05);
+  transform-origin: 50% 50%;
+  padding: 23% 0 12% 0;
+}
 
-  .before,
-  .after {
-    margin: 0;
-  }
-
-  .before figcaption,
-  .after figcaption {
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid #c0c0c0;
-    border-radius: 12px;
-    color: #2e3452;
-    opacity: 0.5;
-    padding: 12px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    line-height: 100%;
-  }
-
-  .before figcaption {
-    transform: scale(.7);
-    left: 12px;
-  }
-
-  .after figcaption {
-    transform: scale(.7);
-    right: 12px;
-  }
+img {
+  display: block;
+  max-height: fit-content;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  transition: filter 0.5s
+}

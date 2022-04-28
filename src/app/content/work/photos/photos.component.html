@@ -1,93 +1,46 @@
 <div class="container">
-    <div class="top-control-container">
 
-        <!--
-        <a href="/work" class="project-back corner-project-back lone-arrow" data-new-state="work">
+    <!-- <div class="detail-btn-container">
+        <a [routerLink]="['/photo-details']" routerLinkActive="router-link-active"  class="project-back corner-project-back lone-arrow" data-new-state="work">
             <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
             <span class="arrow"><span class="arrow-tip"></span><span class="arrow-length"></span></span>
-            <span class="text">Back to Projects</span>
+            <span class="text">See details</span>
         </a>
-        -->
+    </div> -->
 
+    <q>I'd say, being a photographer is like being a ninja: <span>If people can <span style="color: orange;">spot</span> your work you <span style="color: red;">fail</span> .</span> <br>
+        With that being said, I'd like to showcase some of the photos I took or retouched, and feel free to discover
+        what went behind every pictures.</q>
 
+    <div class="image-container">
+        <a [routerLink]="['/photo-details', 'IMG_8831f']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/IMG_8831f.jpg">
+        </a>
+
+        <a [routerLink]="['/photo-details', 'IMG_8879f']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/IMG_8879f.jpg">
+        </a>
+
+        <a [routerLink]="['/photo-details', 'IMG_0982ff']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/IMG_0982ff.jpg">
+        </a>
+
+        <a [routerLink]="['/photo-details', 'IMG_7791f']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/IMG_7791f.jpg">
+        </a>
+
+        <a [routerLink]="['/photo-details', '_MG_9955f']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/_MG_9955f.jpg">
+        </a>
+
+        <a [routerLink]="['/photo-details', 'IMG_6966f']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/IMG_6966f.jpg">
+        </a>
+
+        <a [routerLink]="['/photo-details', 'me_vs_Red_Squirre2']" routerLinkActive="router-link-active" class="img-wrap">
+            <img src="/assets/images/work/photos/me_vs_Red_Squirre2.jpg">
+        </a>
 
     </div>
-
-    <div class="zoom-btn">
-        <div id="zoomBtn" (click)="zoomOnClick($event)"> <i class="fa fa-search-plus"></i> <span>{{ isZoom? 'Zoom out' : 'Zoom in'}}</span></div>
-    </div>
-
-    <img-comparison-slider [value]="5" class="slider-with-animated-handle slider-focus slider-with-shadows"
-        [ngClass]="{zoom: isZoom}">
-        <figure slot="first" class="before">
-            <img height="100%" src="/assets/images/work/photos/IMG_8831.jpg">
-            <figcaption>Before</figcaption>
-        </figure>
-        <figure slot="second" class="after">
-            <img height="100%" src="/assets/images/work/photos/IMG_8831f.jpg">
-            <figcaption>After</figcaption>
-        </figure>
-
-        <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
-            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
-                vector-effect="non-scaling-stroke"></path>
-        </svg>
-    </img-comparison-slider>
-
-    <img-comparison-slider [value]="5" class="slider-with-animated-handle slider-focus slider-with-shadows"
-        [ngClass]="{zoom: isZoom}">
-        <figure slot="first" class="before">
-            <img height="100%" src="/assets/images/work/photos/IMG_8879.jpg">
-            <figcaption>Before</figcaption>
-        </figure>
-        <figure slot="second" class="after">
-            <img height="100%" src="/assets/images/work/photos/IMG_8879f.jpg">
-            <figcaption>After</figcaption>
-        </figure>
-
-        <svg slot="handle" value="20" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
-            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
-                vector-effect="non-scaling-stroke"></path>
-        </svg>
-    </img-comparison-slider>
-
-
-    <img-comparison-slider [value]="5" class="slider-with-animated-handle slider-focus slider-with-shadows"
-        [ngClass]="{zoom: isZoom}">
-        <figure slot="first" class="before">
-            <img height="100%" src="/assets/images/work/photos/IMG_0982.jpg">
-            <figcaption>Before</figcaption>
-        </figure>
-        <figure slot="second" class="after">
-            <img height="100%" src="/assets/images/work/photos/IMG_0982ff.jpg">
-            <figcaption>After</figcaption>
-        </figure>
-
-        <svg slot="handle" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
-            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
-                vector-effect="non-scaling-stroke"></path>
-        </svg>
-    </img-comparison-slider>
-
-
-    <h3>Not even my final form!</h3>
-
-    <img-comparison-slider [value]="95" class="slider-with-animated-handle slider-focus slider-with-shadows"
-        [ngClass]="{zoom: isZoom}">
-        <figure slot="first" class="before">
-            <img height="100%" src="/assets/images/work/photos/me_vs_Red_Squirre1.jpg">
-            <figcaption>Before</figcaption>
-        </figure>
-        <figure slot="second" class="after">
-            <img height="100%" src="/assets/images/work/photos/me_vs_Red_Squirre2.jpg">
-            <figcaption>After</figcaption>
-        </figure>
-
-        <svg slot="handle" class="custom-animated-handle" width="100" viewBox="-8 -3 16 6">
-            <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" stroke="#fff" stroke-width="1"
-                vector-effect="non-scaling-stroke"></path>
-        </svg>
-    </img-comparison-slider>
-
 
 </div>

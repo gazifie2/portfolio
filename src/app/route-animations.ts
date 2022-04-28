@@ -34,35 +34,41 @@ function slideTo(direction: any) {
 
 export const open_close = trigger('routeFadingAnimation', [
 
-  transition('* => 1', [
-    query(':enter', 
-        [
-          style({
-            position: 'fixed',
-            'z-index': 200,
-            top: '10%',
-            opacity: 0,
-            height: '75%',
-          })
-        ], 
-        { optional: true }
+  transition('* => 1', fadeIn()),
+  transition('1 => *', fadeOut()),
+]);
+
+function fadeIn() {
+  const optional = { optional: true };
+  return [
+    query(':enter',
+      [
+        style({
+          position: 'fixed',
+          'z-index': 200,
+          top: '10%',
+          opacity: 0,
+          height: '75%',
+        })
+      ],
+      { optional: true }
     ),
-    query(':leave', 
-        [
-            style({ opacity: 1 }),
-        ], 
-        { optional: true }
+    query(':leave',
+      [
+        style({ opacity: 1, }),
+      ],
+      { optional: true }
     ),
     group([
-      query(':leave', 
+      query(':leave',
         [
-            style({ opacity: 1 }),
-            animate('0.5s', style({ opacity: 1 }))
-        ], 
+          style({ opacity: 1 }),
+          animate('0.5s', style({ opacity: 0,  }))
+        ],
         { optional: true }
-    ),
+      ),
 
-    query(':enter', 
+      query(':enter',
         [
           animate('0.2s', style({
             position: 'relative',
@@ -70,15 +76,65 @@ export const open_close = trigger('routeFadingAnimation', [
             height: '*',
           })
           )
-        ], 
+        ],
         { optional: true }
-    )
+      )
     ])
-    
 
-])
 
-]);
+  ]
+}
+function fadeOut() {
+  const optional = { optional: true };
+  return [
+    query(':enter',
+      [
+        style({
+          position: 'relative',
+          opacity: 0,
+        })
+      ],
+      { optional: true }
+    ),
+    query(':leave',
+      [
+        style({
+          position: 'absolute',
+          opacity: 1,
+          'z-index': 200,
+          height: '*',
+        }),
+      ],
+      { optional: true }
+    ),
+    group([
+      query(':leave',
+        [
+          style({ 
+            //outline: 'solid 20px red',
+            position: 'absolute',
+            opacity: 1, 
+            height: '500px',
+          }),
+          animate('0.5s', style({ opacity: 0, height: 0 }))
+        ],
+        { optional: true }
+      ),
+
+      query(':enter',
+        [
+          animate('0.2s', style({
+            opacity: 1,
+          })
+          )
+        ],
+        { optional: true }
+      )
+    ])
+
+
+  ]
+}
 
 
 export const zoomInOut =
@@ -95,6 +151,11 @@ export const zoomInOut =
     transition('work => it', zoomIn('70%', 'bottom')),
     transition('it => work', zoomOut('70%', 'bottom')),
 
+    transition('photos => photo-details', zoomIn('center', '10%')),
+    transition('photo-details => photos', zoomOut('center', '10%')),
+
+    transition('work => photo-details', zoomIn('30%', '10%')),
+    transition('photo-details => work', zoomOut('10%', '10%')),
 
   ]);
 

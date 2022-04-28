@@ -26,7 +26,7 @@ export class VideosComponent implements OnInit {
 
     //to fiix the background color split when animating routes
    document.body.style.backgroundColor = sessionStorage.getItem('wrapColor') as string; 
-   document.body.style.transition = "all 600ms";
+   //document.body.style.transition = "all 600ms";
    //----
 
 

@@ -14,6 +14,7 @@ import { PhotosComponent } from './content/work/photos/photos.component';
 import { VideosComponent } from './content/work/videos/videos.component';
 import { CodingComponent } from './content/work/coding/coding.component';
 import { ItComponent } from './content/work/it/it.component';
+import { PhotoDetailsComponent } from './content/work/photos/photo-details/photo-details.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ItComponent } from './content/work/it/it.component';
     VideosComponent,
     CodingComponent,
     ItComponent,
+    PhotoDetailsComponent,
   ],
   imports: [
     BrowserModule,

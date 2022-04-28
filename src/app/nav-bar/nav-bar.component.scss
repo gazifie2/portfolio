@@ -294,13 +294,14 @@
 
     .navbar-collapse{
         @media screen and (max-width:700px) {
-            //display: none; // !!!!!
-            padding: 0;
-            pointer-events: none;
-            opacity: 0;
-            > li:last-child { //this fixes the left drift when collapse
-                display: none !important;
-            }
+          white-space: nowrap;
+          //display: none; // !!!!!
+          padding: 0;
+          pointer-events: none;
+          opacity: 0;
+          > li:last-child { //this fixes the left drift when collapse
+              display: none !important;
+           }
         }
     }
 

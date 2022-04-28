@@ -1,0 +1,160 @@
+.top-control-container {
+    display: block;
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 60px;
+    z-index: 150;
+    @media screen and (max-width:700px) {
+      top: 50px;
+    }
+  }
+
+    
+  .container{
+    color: white;
+    display: grid;
+    grid-template-columns: min-content auto;
+    margin: 60px 30px 0 30px;
+    justify-items: center;
+    //background-color: #333333;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    margin: 30px 0 0 0 ;
+    grid-template-columns: auto;
+  }
+}
+
+  p {
+    width: 80%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 300;
+  }
+
+  
+  .zoom-btn{
+    display: flex;
+    position: fixed;
+    cursor: pointer;
+    top: 60px;
+    left: 30px;
+    font-size: 12px;
+    z-index: 30;
+    text-align: center;
+    white-space: normal;
+    width: fit-content;
+    filter: drop-shadow(0 0 1px black);
+    & span {
+      display: flex;
+      text-align: center;
+      position: absolute;
+      top: -5px;
+      left: -10px;
+      justify-items: center;
+      align-items: center;  
+      opacity: 0;
+      transition: opacity 0.2s;
+      height: 40px;
+      width: 40px;
+    }
+    & i {
+      font-size: 1.5rem;
+      transition: color 0.2s;
+      transform: scale(1);
+      transition: transform 0.2s;
+    }
+    &:hover {
+      i {
+        cursor: pointer;
+        opacity: 0.3;
+        color: yellow;
+        transform: scale(1.5);
+      }
+      span {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 530px) { //zoom doesn't function on width less than than this anyway, and phones have pinch to zoom
+    .zoom-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
+  .container h3 {
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  img-comparison-slider {
+    max-height: max-content;
+    width: max-content;
+    max-width: 90vw;
+    border-radius: 10px;
+    margin: 1rem 0;
+    & figure img {
+      max-height: 80vh;
+      max-width: 90vw;
+    }
+  }
+  
+  .slider-with-shadows {
+    --default-handle-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    --divider-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .zoom figure img {
+    max-height: max-content;
+  }
+  
+  .custom-animated-handle {
+      color: white;
+      font-size: larger;
+      font-weight: 200;
+      transition: transform 0.2s;
+      width: 50px;
+    }
+  
+  .slider-with-animated-handle:hover .custom-animated-handle {
+      transform: scale(1.3);
+  }
+  
+  .slider-focus:focus {
+      outline: none;
+      box-shadow: 0px 0px 15px 0px #0000006a;
+      scroll-behavior: smooth !important; //doesn't work yet, still snaps when focused
+    }
+  
+    .before,
+    .after {
+      margin: 0;
+    }
+  
+    .before figcaption,
+    .after figcaption {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #c0c0c0;
+      border-radius: 12px;
+      color: #2e3452;
+      opacity: 0.5;
+      padding: 12px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 100%;
+    }
+  
+    .before figcaption {
+      transform: scale(.7);
+      left: 12px;
+    }
+  
+    .after figcaption {
+      transform: scale(.7);
+      right: 12px;
+    }
+  
