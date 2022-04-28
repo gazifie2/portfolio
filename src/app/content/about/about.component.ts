@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.backgroundWrapColor = 'yellow';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
     
     this.age = this.calculateAge("04/03/1992", new Date);
 

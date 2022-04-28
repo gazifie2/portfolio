@@ -4,7 +4,7 @@ import { UiServiceService } from 'src/app/services/ui-service.service';
 @Component({
   selector: 'app-project-thinker-portrait',
   templateUrl: './project-thinker-portrait.component.html',
-  styleUrls: ['./project-thinker-portrait.component.scss']
+  styleUrls: ['../photos-articles-styleSheet.scss', './project-thinker-portrait.component.scss']
 })
 export class ProjectThinkerPortraitComponent implements OnInit {
 
@@ -17,7 +17,7 @@ export class ProjectThinkerPortraitComponent implements OnInit {
     sessionStorage.removeItem('switch-arrow-color');
     sessionStorage.removeItem('switch-burger-color');
     this.backgroundWrapColor = '#333333';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
 
     //to fiix the background color split when animating routes
     document.body.style.backgroundColor = sessionStorage.getItem('wrapColor') as string;
@@ -69,6 +69,11 @@ export class ProjectThinkerPortraitComponent implements OnInit {
       sessionStorage.removeItem('switch-burger-color');
     }
 
+    //animating header text
+    var headerText = document.getElementsByClassName('header-pic-text')[0] as HTMLElement;
+    if(headerText){
+      headerText.style.top = 50+scrollHeight*0.08+'%';
+    }
   };
 
   zoomOnClick(event?: any) {

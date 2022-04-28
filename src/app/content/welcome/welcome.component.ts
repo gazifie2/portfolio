@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     this.backgroundWrapColor = 'linear-gradient(90deg, rgba(5,41,66,1) 19%, rgb(1, 65, 108) 83%, rgb(36, 63, 109) 100%)';
     //this.backgroundWrapColor = '#5210ac';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
     //to fiix the background color split when animating routes
     document.body.style.backgroundColor = sessionStorage.getItem('wrapColor') as string; 
     //document.body.style.transition = "all 600ms";

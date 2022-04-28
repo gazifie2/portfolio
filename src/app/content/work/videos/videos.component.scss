@@ -2,15 +2,18 @@
     display: grid;
     grid-column: auto;
     grid-template-columns: auto;
-    margin: 0 30px;
+    margin: 0 ;
     justify-content: space-evenly;
     text-align: center;
+    //min-height: 100%;
     // align-items: center;
     // justify-items: center;
     // justify-content: center;
 }
 
 .video-player {
+    visibility: hidden;
+    pointer-events: none;
     max-width: 720px;
     max-height: 480px;
     margin: 10px;
@@ -32,18 +35,20 @@
 
 
 
-.center {
-    height: 100vh;
+.loading-container {
+    height: 80vh;
+    width: 100%;
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    background: transparent;
+    flex-wrap: nowrap;
   }
   .wave {
-    width: 5px;
+    width: clamp(2px, 1vw, 5px);
     height: 100px;
-    background: linear-gradient(45deg, orangered, yellow);
-    margin: 10px;
+    background: linear-gradient(45deg, orangered, rgb(246, 246, 199));
+    margin: clamp(3px, 1vw, 10px);
     animation: wave 1s linear infinite;
     border-radius: 20px;
   }

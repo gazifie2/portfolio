@@ -4,7 +4,7 @@ import { UiServiceService } from 'src/app/services/ui-service.service';
 @Component({
   selector: 'app-project-turkish-lights',
   templateUrl: './project-turkish-lights.component.html',
-  styleUrls: ['./project-turkish-lights.component.scss']
+  styleUrls: ['../photos-articles-styleSheet.scss', './project-turkish-lights.component.scss']
   //styleUrls: ['../project-silhouette/project-silhouette.component.scss']
 })
 export class ProjectTurkishLightsComponent implements OnInit {
@@ -18,7 +18,7 @@ export class ProjectTurkishLightsComponent implements OnInit {
     sessionStorage.removeItem('switch-arrow-color');
     sessionStorage.removeItem('switch-burger-color');
     this.backgroundWrapColor = '#333333';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
 
     //to fiix the background color split when animating routes
     document.body.style.backgroundColor = sessionStorage.getItem('wrapColor') as string;
@@ -70,6 +70,14 @@ export class ProjectTurkishLightsComponent implements OnInit {
       sessionStorage.removeItem('switch-burger-color');
     }
 
+    //animating header text
+    var headerText = document.getElementsByClassName('header-pic-text')[0] as HTMLElement;
+    if(headerText){
+      if (document.body.offsetWidth > 900)
+      headerText.style.top = 45+scrollHeight*0.08+'%';
+      else
+        headerText.style.top = 50+scrollHeight*0.065+'%';
+    }
   };
 
   zoomOnClick(event?: any) {

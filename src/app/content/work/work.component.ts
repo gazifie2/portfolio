@@ -14,7 +14,7 @@ export class WorkComponent implements OnInit {
 
   ngOnInit(): void {
     this.backgroundWrapColor = '#34495e';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
 
     //to fiix the background color split when animating routes
     document.body.style.backgroundColor = sessionStorage.getItem('wrapColor') as string;

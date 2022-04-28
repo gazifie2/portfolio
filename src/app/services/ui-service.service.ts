@@ -19,6 +19,7 @@ export class UiServiceService {
   }
 
   YTembedVideos(id:string, source:string){
+    //document.cookie = "SameSite=None; Secure";
     return environment.YTembed+id+"?enablejsapi=1&origin="+source;
   }
   GDembedVideos(id:string){

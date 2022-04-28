@@ -33,6 +33,7 @@ export class AppComponent implements AfterViewChecked {
   title = 'portfolio';
   isOpen = false;
   backgroundWrapColor:any;
+  backColor:any;
   //backgroundWrapColor = 'linear-gradient(90deg, rgba(5,41,66,1) 19%, rgb(1, 65, 108) 83%, rgb(36, 63, 109) 100%)';
 
   constructor(private uiService: UiServiceService, private cd: ChangeDetectorRef) { }
@@ -42,6 +43,23 @@ export class AppComponent implements AfterViewChecked {
   
   ngAfterViewChecked():void {
     this.backgroundWrapColor = this.uiService.colorGen();
+
+    if (this.backgroundWrapColor == undefined) {
+      this.backgroundWrapColor = sessionStorage.getItem('wrapColor') as string;
+      this.uiService.setWrapColor(this.backgroundWrapColor);
+    }
+    if (sessionStorage.getItem('wrapColor') === 'null') {
+      this.backgroundWrapColor = 'green';
+      this.uiService.setWrapColor(this.backgroundWrapColor);
+    }
+    
+    this.backColor = this.backgroundWrapColor;
+    if (this.backgroundWrapColor.includes('linear-gradient')) this.backColor = 'rgb(1, 65, 108)';
+    if (this.backgroundWrapColor == 'yellow') this.backColor = 'rgb(226, 226, 0)';
+
+    var style = document.body.style;
+    style.setProperty('--backColor', this.backColor);
+
     this.cd.detectChanges();
   }
 

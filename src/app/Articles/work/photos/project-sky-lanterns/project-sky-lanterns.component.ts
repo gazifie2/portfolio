@@ -4,7 +4,7 @@ import { UiServiceService } from 'src/app/services/ui-service.service';
 @Component({
   selector: 'app-project-sky-lanterns',
   templateUrl: './project-sky-lanterns.component.html',
-  styleUrls: ['./project-sky-lanterns.component.scss']
+  styleUrls: ['../photos-articles-styleSheet.scss', './project-sky-lanterns.component.scss']
 })
 export class ProjectSkyLanternsComponent implements OnInit {
 
@@ -17,7 +17,7 @@ export class ProjectSkyLanternsComponent implements OnInit {
     sessionStorage.removeItem('switch-arrow-color');
     sessionStorage.removeItem('switch-burger-color');
     this.backgroundWrapColor = '#333333';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
 
     //to fiix the background color split when animating routes
     document.body.style.backgroundColor = sessionStorage.getItem('wrapColor') as string;
@@ -69,6 +69,12 @@ export class ProjectSkyLanternsComponent implements OnInit {
       sessionStorage.removeItem('switch-burger-color');
     }
 
+    //animating header text
+    var headerText = document.getElementsByClassName('header-pic-text')[0] as HTMLElement;
+    if(headerText){
+      headerText.style.top = 50+scrollHeight*0.08+'%';
+    }
+    
   };
 
   zoomOnClick(event?: any) {

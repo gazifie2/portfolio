@@ -8,31 +8,32 @@ import { UiServiceService } from '../services/ui-service.service';
 })
 export class NavBarComponent implements OnInit {
 
-  isCollapsed:boolean = false;
-  navBarColor:any;
+  backgroundWrapColor: any;
+  isCollapsed: boolean = false;
+  navBarColor: any;
   elemPosition: any;
   SwitchNabBarColor: boolean = false;
   constructor(private uiService: UiServiceService, private cd: ChangeDetectorRef) { }
 
-  ngDoCheck():void {
+  ngDoCheck(): void {
     //if (window.location.href.split('/')[window.location.href.split('/').length-1] =='about'){
-    if (sessionStorage.getItem('wrapColor') == 'yellow'){
+    if (sessionStorage.getItem('wrapColor') == 'yellow') {
       this.SwitchNabBarColor = true;
     } else {
       this.SwitchNabBarColor = false;
     }
   }
-  ngOnInit():void {
+  ngOnInit(): void {
     window.addEventListener('scroll', this.scroll, true);
   }
 
-  ngAfterViewChecked():void {
+  ngAfterViewChecked(): void {
     this.navBarColor = this.uiService.colorGen();
     this.cd.detectChanges();
 
   }
 
-  setColor(){
+  setColor() {
     let myClasses = {
       activeSwitchColor: this.SwitchNabBarColor == true,
       notactiveSwitchColor: this.SwitchNabBarColor == false,
@@ -40,11 +41,11 @@ export class NavBarComponent implements OnInit {
     return myClasses;
   }
 
-  toggleCollapse(){
+  toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
   }
 
-  BtnCollapseCss(){
+  BtnCollapseCss() {
     let myClasses = {
       activeCollapse: this.isCollapsed == false,
       notactiveCollapse: this.isCollapsed == true,
@@ -57,14 +58,14 @@ export class NavBarComponent implements OnInit {
 
     //scrollingElement was working, somehow stopped working after outlet annimation. lol
     //this.elemPosition = this.elemPosition != undefined||0 ? document.scrollingElement?.scrollTop : 0;
-    this.elemPosition = this.elemPosition != undefined||0 ? document.body.scrollTop : 0;
+    this.elemPosition = this.elemPosition != undefined || 0 ? document.body.scrollTop : 0;
 
     //console.log(document.scrollingElement?.scrollTop);
-    
-    //BackToTop button
-    if(this.elemPosition > 130) {
 
-      if(document.getElementById("scrollTopBtn")?.classList.contains('hidden')){
+    //BackToTop button
+    if (this.elemPosition > 130) {
+
+      if (document.getElementById("scrollTopBtn")?.classList.contains('hidden')) {
         document.getElementById("scrollTopBtn")?.classList.remove('hidden');
         document.getElementById("scrollTopBtn")?.classList.add('showScrollTopBtn');
       }
@@ -80,19 +81,19 @@ export class NavBarComponent implements OnInit {
     var colorSwitchBurger = sessionStorage.getItem('switch-burger-color');
     //console.log(colorSwitchArrow);
     if (colorSwitchArrow == 'true') {
-      (document.getElementById('scrollTopBtn')as HTMLElement).classList.add('light-color-arrow');
+      (document.getElementById('scrollTopBtn') as HTMLElement).classList.add('light-color-arrow');
     } else {
-      (document.getElementById('scrollTopBtn')as HTMLElement).classList.remove('light-color-arrow');
+      (document.getElementById('scrollTopBtn') as HTMLElement).classList.remove('light-color-arrow');
     }
     if (colorSwitchBurger == 'true') {
-      (document.getElementById('mob-nav-btn')as HTMLElement).classList.add('light-color-burger');
+      (document.getElementById('mob-nav-btn') as HTMLElement).classList.add('light-color-burger');
     } else {
-      (document.getElementById('mob-nav-btn')as HTMLElement).classList.remove('light-color-burger');
+      (document.getElementById('mob-nav-btn') as HTMLElement).classList.remove('light-color-burger');
     }
   };
 
   scrollTop(el: any) {
-    el.scrollIntoView({behavior: "smooth"});
+    el.scrollIntoView({ behavior: "smooth" });
   }
 
 }

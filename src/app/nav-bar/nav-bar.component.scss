@@ -339,19 +339,21 @@
       transform: rotate(-45deg) translateY(0); 
     }
     .notactiveCollapse::before, .notactiveCollapse::after {
-      background-color: #212121; 
+      background-color: var(--backColor); 
     }
     .notactiveCollapse:hover::before, .notactiveCollapse:hover::after {
         background-color: orangered; 
     }
 
     .mob-profile-social-links {
-        list-style: none;
-        padding: 0px !important;
-        //float: left;
-        //width: 25%;
-        text-align: center;
-      }
+      // outline: solid 1px red;
+      white-space: nowrap;
+      list-style: none;
+      padding: 0 !important;
+      //float: left;
+      //width: 25%;
+      text-align: center;
+    }
 
       .mob-profile-social-links li a {
         display: inline-block;
@@ -382,7 +384,7 @@
         //filter: drop-shadow(0 0 2px orangered);
         //text-shadow: 0 0 5px orangered;
         cursor: pointer;
-        color: orangered;
+        color: var(--backColor);
         transform: scale(1.75);
     }
         

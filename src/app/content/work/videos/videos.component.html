@@ -1,6 +1,6 @@
 <div class="container">
 
-    <!-- <div *ngIf="YTembedURL_list" id="loading-container" class="center">
+    <div *ngIf="showSpinner === true" id="loading-container" class="loading-container">
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
@@ -11,7 +11,7 @@
         <div class="wave"></div>
         <div class="wave"></div>
         <div class="wave"></div>
-    </div> -->
+    </div>
 
     <!--
     <div class="back-btn">
@@ -41,9 +41,9 @@
 </div>
 -->
 
-    <div *ngIf="YTembedURL_list.length > 0">
-        <iframe *ngFor="let video of YTembedURL_list" class="video-player" type="text/html" width="1280" height="720"
-            [src]="video" frameborder="0" allowfullscreen autoplay>
+    <div *ngIf="YTembedURL_list.length == this.videoId_list.length">
+        <iframe *ngFor="let video of YTembedURL_list" (load)="myLoadEvent(true)" class="video-player" type="text/html" width="1280" height="720"
+            [src]="video" frameborder="0" sandbox="allow-same-origin allow-scripts allow-presentation" allowfullscreen autoplay>
         </iframe>
     </div>
 

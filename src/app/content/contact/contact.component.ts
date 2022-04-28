@@ -16,16 +16,7 @@ export class ContactComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    if (this.backgroundWrapColor == undefined){
-      this.backgroundWrapColor = sessionStorage.getItem('wrapColor');
-      this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
-    }
-    if (sessionStorage.getItem('wrapColor') === 'null'){
-    this.backgroundWrapColor = 'green';
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
-    }
-    //this.backgroundWrapColor = 'green';
-    //this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    //
   }
   
   back() {

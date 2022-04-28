@@ -14,7 +14,7 @@ export class ServicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.backgroundWrapColor = '#f86449'; // <-- this is orangy, or this --> blueish #5210ac
-    this.backgroundWrapColor = this.uiService.setWrapColor(this.backgroundWrapColor);
+    this.uiService.setWrapColor(this.backgroundWrapColor);
   }
 
 }
