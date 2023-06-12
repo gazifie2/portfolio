@@ -21,16 +21,16 @@ $color-work-highlight: #fbe10f;
 $wrap-background-color: #000000;
 
 @font-face {
-    font-family: "Ginger Regular";
-    src: local("ginger-regular"), url(./assets/fonts/f37ginger-regular-webfont.bde140e3.woff) format("truetype");
+  font-family: "Ginger Regular";
+  src: local("ginger-regular"), url(./assets/fonts/f37ginger-regular-webfont.bde140e3.woff) format("truetype");
 }
 @font-face {
-    font-family: "league-spartan";
-    src: local("league-spartan"), url(./assets/fonts/league-spartan.bold.ttf) format("truetype");
+  font-family: "league-spartan";
+  src: local("league-spartan"), url(./assets/fonts/league-spartan.bold.ttf) format("truetype");
 }
 @font-face {
-    font-family: "Montserrat-Thin";
-    src: local("Montserrat-Thin"), url(./assets/fonts/Montserrat-Thin.ttf) format("truetype");
+  font-family: "Montserrat-Thin";
+  src: local("Montserrat-Thin"), url(./assets/fonts/Montserrat-Thin.ttf) format("truetype");
 }
 @font-face {
   font-family: "Roboto";
@@ -45,47 +45,56 @@ $wrap-background-color: #000000;
   src: local("Abilane"), url(./assets/fonts/AbilaneFreeTrial-MV3Pp.otf) format("truetype");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
-@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
 
+/* Scrollbar styling for FireFox */
+:root {
+  scrollbar-color: rgba(orange, 0.7) transparent;
+  scrollbar-width: thin !important;
+}
 
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "league-spartan", "Abilane";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden !important;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "league-spartan", "Abilane";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+}
 
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: 'Ginger Regular' ;
-    overflow-x: hidden !important;
-    scroll-behavior: smooth !important;
-    overflow-y: overlay !important;
-    //background-color: rgb(1, 65, 108); //to fix color transition from welcome page to other pages since gradiant is not supported
-    background-color: val(--wrapBackColor); //to fix color transition from welcome page to other pages since gradiant is not supported
-    background-size: cover;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Ginger Regular";
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
+  overflow-y: overlay !important;
+  //background-color: rgb(1, 65, 108); //to fix color transition from welcome page to other pages since gradiant is not supported
+  background-color: val(
+    --wrapBackColor
+  ); //to fix color transition from welcome page to other pages since gradiant is not supported
+  background-size: cover;
 
-    // cursor: url('/assets/images/custom_cursor.png'), default;
+  // cursor: url('/assets/images/custom_cursor.png'), default;
+}
 
-  }
-
-  //btn call to Action ----------
-@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+//btn call to Action ----------
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
   transition: $property $duration $ease;
 }
 
 * {
   box-sizing: border-box;
-  &::before, &::after {
+  &::before,
+  &::after {
     box-sizing: border-box;
   }
 }
@@ -95,7 +104,8 @@ $wrap-background-color: #000000;
   top: 70%;
   //left: 20px; // fix shifting up/down when sliding
   margin-left: 40px;
-  transform: translate( calc(var(--XcoordTitle) * 2), calc(var(--YcoordTitle) * 3) ) rotateX(calc(var(--YcoordTitleDeg) * 1.5) ) rotateY( calc(var(--XcoordTitleDeg) * 1.5) );
+  transform: translate(calc(var(--XcoordTitle) * 2), calc(var(--YcoordTitle) * 3))
+    rotateX(calc(var(--YcoordTitleDeg) * 1.5)) rotateY(calc(var(--XcoordTitleDeg) * 1.5));
   transition: transform 0ms, margin-left 1000ms 4800ms ease-in-out, opacity 1000ms 4800ms ease-in-out !important;
   z-index: 4;
 }
@@ -117,7 +127,7 @@ button {
     width: 12rem;
     height: auto;
     .circle {
-      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
       position: relative;
       display: block;
       margin: 0;
@@ -126,21 +136,21 @@ button {
       background: $white;
       border-radius: 1.625rem;
       .icon {
-        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
         background: $black;
         &.arrow {
-          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
           left: 0.625rem;
           width: 1.125rem;
           height: 0.125rem;
           background: none;
           &::before {
             position: absolute;
-            content: '';
+            content: "";
             top: -0.25rem;
             right: 0.0625rem;
             width: 0.625rem;
@@ -153,7 +163,7 @@ button {
       }
     }
     .button-text {
-      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
       position: absolute;
       top: 0;
       left: 0;
@@ -173,8 +183,8 @@ button {
       width: 100%;
       .icon {
         &.arrow {
-        background: $black;
-        transform: translate(1rem, 0);
+          background: $black;
+          transform: translate(1rem, 0);
         }
       }
     }
@@ -185,25 +195,23 @@ button {
 }
 //-----
 
-
-  .bg-title-tr {
-    display: flex;
-    // position: fixed;
-    position: absolute;
-    pointer-events:none;
-    font-size: clamp(10rem,10vw,15rem);
-    justify-content: center;
-    align-items: center;
-    inset: 0;
-    height: 100%;
-    transform: translate(0%, 0%);
-    color: $orange;
-    text-shadow: -5px -5px 15px rgba($color: $black, $alpha: .08),
-                  5px 5px 15px rgba($color: $white, $alpha: .08);
-    user-select: none;
-    opacity: 0;
-    transition: color 600ms;
-    animation: fadeInOpacity 600ms 250ms forwards;
+.bg-title-tr {
+  display: flex;
+  // position: fixed;
+  position: absolute;
+  pointer-events: none;
+  font-size: clamp(10rem, 10vw, 15rem);
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  height: 100%;
+  transform: translate(0%, 0%);
+  color: $orange;
+  text-shadow: -5px -5px 15px rgba($color: $black, $alpha: 0.08), 5px 5px 15px rgba($color: $white, $alpha: 0.08);
+  user-select: none;
+  opacity: 0;
+  transition: color 600ms;
+  animation: fadeInOpacity 600ms 250ms forwards;
 }
 
 @keyframes fadeInOpacity {
@@ -225,7 +233,17 @@ button {
   }
 }
 
-  //Scroll Bar
+
+@keyframes flashing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .75;
+  }
+}
+
+//Scroll Bar
 
 /* width */
 ::-webkit-scrollbar {
@@ -235,9 +253,9 @@ button {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  // box-shadow: inset 0 0 2px rgba(gray, 0.5); 
-  // -webkit-box-shadow: inset 0 0 2px rgba(gray, 0.5); 
-  border-radius:10px;
+  // box-shadow: inset 0 0 2px rgba(gray, 0.5);
+  // -webkit-box-shadow: inset 0 0 2px rgba(gray, 0.5);
+  border-radius: 10px;
   -webkit-border-radius: 10px;
   border: solid 6px transparent;
 }
@@ -245,20 +263,32 @@ button {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: transparent;
-  border-radius:10px;
+  border-radius: 10px;
   -webkit-border-radius: 10px;
-  box-shadow: inset 0 0 50px rgba(gray, .75);
-  -webkit-box-shadow: inset 0 0 50px rgba(gray, .75);
+  box-shadow: inset 0 0 50px rgba(gray, 0.75);
+  -webkit-box-shadow: inset 0 0 50px rgba(gray, 0.75);
   border: solid 6px transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  //background: rgba(#f1c40f, 0.5); 
-  box-shadow: inset 0 0 50px rgba(orange, .7);
-  -webkit-box-shadow: inset 0 0 50px rgba(orange, .7);
+  //background: rgba(#f1c40f, 0.5);
+  box-shadow: inset 0 0 50px rgba(orange, 0.7);
+  -webkit-box-shadow: inset 0 0 50px rgba(orange, 0.7);
 }
 
+@media screen and (max-width: 700px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: auto !important;
+    max-width: 3px !important;
+  }
+
+  /* Track */
+  // ::-webkit-scrollbar-track {
+  //   border: solid 0px transparent;
+  // }
+}
 //------
 
 //--------- Blob annimation -----
@@ -266,54 +296,53 @@ button {
   @return random(30) + 40%;
 }
 
-.blob 
-{
+.blob {
   position: absolute;
   width: 50vh;
   height: 50vh;
   aspect-ratio: 1/1;
   -webkit-aspect-ratio: 1/1;
-  background-color:orange;
+  background-color: orange;
   animation: spin 6s infinite linear;
 
   @for $i from 1 through 20 {
     $a: random-pct();
-      $b: 100% - $a;
-      $c: random-pct();
-      $d: 100% - $c;
-      $e: random-pct();
-      $f: 100% - $e;
-      $g: random-pct();
-      $h: 100% - $g;
-      border-radius: #{$a $b $c $d} / #{$e $f $g $h};
-      animation-duration: 3s;
+    $b: 100% - $a;
+    $c: random-pct();
+    $d: 100% - $c;
+    $e: random-pct();
+    $f: 100% - $e;
+    $g: random-pct();
+    $h: 100% - $g;
+    border-radius: #{$a $b $c $d} / #{$e $f $g $h};
+    animation-duration: 3s;
   }
 }
 
 @keyframes spin {
-  from { 
-    background-color:$yellow;
+  from {
+    background-color: $yellow;
     transform: rotate(0deg);
   }
   50% {
-    background-color:$orange;
+    background-color: $orange;
   }
-  to { 
-    background-color:$yellow;
-    transform: rotate(-360deg); 
+  to {
+    background-color: $yellow;
+    transform: rotate(-360deg);
   }
 }
 @-webkit-keyframes spin {
-  from { 
-    background-color:$yellow;
+  from {
+    background-color: $yellow;
     transform: rotate(0deg);
   }
   50% {
-    background-color:$orange;
+    background-color: $orange;
   }
-  to { 
-    background-color:$yellow;
-    transform: rotate(-360deg); 
+  to {
+    background-color: $yellow;
+    transform: rotate(-360deg);
   }
 }
 //---------

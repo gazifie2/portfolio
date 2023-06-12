@@ -51,7 +51,7 @@ $bg-color: rgb(253, 247, 237); //mid
     margin-top: -30px;
     transform: translate(-50%, -50%);
     color: bisque;
-    font-size: 10rem;
+    font-size: clamp(6.5rem, 27vw, 13rem);
     text-align: center;
     mix-blend-mode: overlay;
     filter: drop-shadow(0 0 30px rgba(black,.5));

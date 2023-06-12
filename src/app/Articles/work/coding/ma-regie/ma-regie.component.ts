@@ -8,6 +8,9 @@ import { UiServiceService } from 'src/app/services/ui-service.service';
 })
 export class MaRegieComponent implements OnInit {
 
+  upperLetters = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' ];
+  numbers = [...Array(10).keys()];
+  
   constructor(private uiService: UiServiceService) { }
 
   ngOnInit(): void {

@@ -149,8 +149,8 @@ $bg-color: linear-gradient(90deg, rgba(5, 41, 66, 1) 19%, rgb(1, 65, 108) 83%, r
 .card {
   // outline: solid 1px yellow;
   position: fixed;
-  max-height: 100vh;
-  max-width: 100vh;
+  max-height: min(100vh,100vw);
+  max-width: min(100vh,100vw);
   height: 92%;
   width: 92%;
   bottom: 0;
@@ -255,7 +255,7 @@ $bg-color: linear-gradient(90deg, rgba(5, 41, 66, 1) 19%, rgb(1, 65, 108) 83%, r
   //left: 50%;
   right: 0;
   top: 30%;
-  font-size: clamp(4rem, 12vw, 6rem);
+  font-size: clamp(4rem, min(12vw, 12vh), 6rem);
   color: $black;
   text-align: right;
   //white-space: nowrap;

@@ -6,27 +6,27 @@ import { environment } from 'src/environments/environment';
 })
 export class UiServiceService {
 
-  color:any;
+  color: any;
   constructor() { }
 
   //---------------------------------- Setting background color for every root ------------------------------------//
-  setWrapColor(color:any){
+  setWrapColor(color: any) {
     this.color = color;
     sessionStorage.setItem('wrapColor', color);
   }
 
-  colorGen():any{
+  colorGen(): any {
     return this.color;
   }
 
   //--------------------------------- For video content -------------------------------------//
 
-  YTembedVideos(id:string, source:string){
+  YTembedVideos(id: string, source: string) {
     //document.cookie = "SameSite=None; Secure";
-    return environment.YTembed+id+"?enablejsapi=1&origin="+source;
+    return environment.YTembed + id + "?enablejsapi=1&origin=" + source;
   }
-  GDembedVideos(id:string){
-    return environment.GDembed+id+"/preview";
+  GDembedVideos(id: string) {
+    return environment.GDembed + id + "/preview";
   }
 
 
@@ -68,25 +68,27 @@ export class UiServiceService {
     scroll_down_arrow.forEach(element => {
       this.annimateElement_inView(element, 'shadow-annimation-arrow-down');
     });
-    
+
   };
 
   isInViewport(element: any) {
+    if (!element) return false;
     const rect = element.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
 
-  annimateElement_inView(element:any, className:string='') {
-    this.isInViewport(element)?element.classList.add(className)  : element.classList.remove(className) ;
+  annimateElement_inView(element: any, className: string = '') {
+    if (!element) return;
+    this.isInViewport(element) ? element.classList.add(className) : element.classList.remove(className);
   }
 
   // Annimating UI elements for Photos projects
-  UIelementsAnnimation(){
+  UIelementsAnnimation() {
     setTimeout(() => {
       // annimate first scroll down arrow
       var scroll_down_arrow = document.querySelector('.scroll-down-arrow-wrap') as HTMLElement;
@@ -100,20 +102,20 @@ export class UiServiceService {
 
   IntersectSetup() {
     const options = {
-        rootMargin: '5% 0px 5% 0px'
+      rootMargin: '5% 0px 5% 0px'
     }
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {          
+      entries.forEach(entry => {
 
-            if(entry.isIntersecting) {
-                entry.target.classList.add('show');   
-                observer.unobserve(entry.target);
-            } else {
-              entry.target.classList.remove('show');
-              return;
-            }
-        })
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove('show');
+          return;
+        }
+      })
     }, options);
 
     const paras = document.querySelectorAll('p');
@@ -121,8 +123,8 @@ export class UiServiceService {
 
     const imgs = document.querySelectorAll('.small-preview');
     imgs.forEach(img => observer.observe(img));
-    
-}
-//----
-  
+
+  }
+  //----
+
 }
